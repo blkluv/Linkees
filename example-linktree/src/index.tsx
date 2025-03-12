@@ -61,8 +61,8 @@ const rootElement = document.getElementById("root");
 if (rootElement) {
   ReactDOM.createRoot(rootElement)?.render(
     <React.StrictMode>
-      <Linkees cardItems={items} name={"Sagnik."} />{" "}
-      {/* headerAvatar={'any image url'}*/}
+      <Linkees cardItems={items} name={"ATL5D"} />{" "}
+      {/* headerAvatar={'https://i.imgur.com/FI8QVOa.jpeg'}*/}
     </React.StrictMode>
   );
 }
