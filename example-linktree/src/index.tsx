@@ -7,7 +7,7 @@ import "./css/normalize.css";
 
 const items = [
   {
-    title: "Website",
+    title: "TEST",
     subtitle: "Look at my work!",
     type: CHANNEL_TYPES.WEBSITE,
     link: "https://sagnik-wtf.vercel.app", //your personal website or portfolio  link
