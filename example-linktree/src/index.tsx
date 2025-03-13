@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Dribble from "./dribble.png";
+import Dribble from "./example-linktree/public/dribble.png";
 import Linkees, { CHANNEL_TYPES } from "linkees";
 import "./css/normalize.css";
 
