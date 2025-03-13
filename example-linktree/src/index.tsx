@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Dribble from "./dribble.png"; 
+
 
 import Linkees, { CHANNEL_TYPES } from "linkees";
 
@@ -9,8 +11,8 @@ const items = [
   {
     title: "TEST",
     subtitle: "Look at my work!",
-    type: CHANNEL_TYPES.WEBSITE,
-    link: "https://sagnik-wtf.vercel.app", //your personal website or portfolio  link
+    type: Dribble,
+    link: "https://sagnik-wtf.vercel.app",
   },
   {
     title: "GitHub",
