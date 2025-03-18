@@ -6,21 +6,21 @@ import "./css/normalize.css";
 
 const items = [
     {
-        title: "TEST",
-        subtitle: "Look at my work!",
+        title: "🔗 LINK",
+        subtitle: "Add Telegram channel link",
         type: CHANNEL_TYPES.WEBSITE, // Or a more appropriate CHANNEL_TYPES value
-        link: "https://sagnik-wtf.vercel.app",
+        link: "https://buy.stripe.com/8wM15ph0z8LG6dO5l8",
         image: Dribble, // Use the image import here
     },
     {
-        title: "GitHub",
-        subtitle: "@heysagnik | 🏡 to all my open-source projects",
-        type: CHANNEL_TYPES.GITHUB,
+        title: "Telegram",
+        subtitle: "@heysagnik | DM @HAHZNFT after payment",
+        type: CHANNEL_TYPES.TELEGRAM,
         link: "https://github.com/heysagnik",
     },
     {
         title: "Instagram",
-        subtitle: "@heysagnik |  Shots of my life 🙂",
+        subtitle: "@heysagnik |  Promote Livestream on IG",
         type: CHANNEL_TYPES.INSTAGRAM,
         link: "https://instagram.com/heysagnik",
     },
