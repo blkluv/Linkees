@@ -7,7 +7,7 @@ import "./css/normalize.css";
 const items = [
     {
         title: "🔗 LINK",
-        subtitle: "Add Telegram channel link",
+        subtitle: "Add a 30 day Telegram channel link to wataa.menu",
         type: CHANNEL_TYPES.WEBSITE, // Or a more appropriate CHANNEL_TYPES value
         link: "https://buy.stripe.com/8wM15ph0z8LG6dO5l8",
         image: Dribble, // Use the image import here
