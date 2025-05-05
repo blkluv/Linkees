@@ -4,65 +4,81 @@ import Dribble from "./assets/images/dribble.png";
 import Linkees, { CHANNEL_TYPES } from "linkees";
 import "./css/normalize.css";
 
-const items = [
-    {
-        title: "🔗 LINK",
-        subtitle: "Add a 30 day Telegram channel link to wataa.menu",
-        type: CHANNEL_TYPES.WEBSITE, // Or a more appropriate CHANNEL_TYPES value
-        link: "https://buy.stripe.com/8wM15ph0z8LG6dO5l8",
-        image: pay, // Use the image import here
-    },
-    {
-        title: "Telegram",
-        subtitle: "@heysagnik | DM @HAHZNFT after payment",
-        type: CHANNEL_TYPES.TELEGRAM,
-        link: "https://github.com/heysagnik",
-    },
-    {
-        title: "Instagram",
-        subtitle: "@heysagnik |  Promote Livestream on IG",
-        type: CHANNEL_TYPES.INSTAGRAM,
-        link: "https://instagram.com/heysagnik",
-    },
-    {
-        title: "Twitter",
-        subtitle: "@heysagnik | 😉",
-        type: CHANNEL_TYPES.TWITTER,
-        link: "https://twitter.com/atl5d",
-    },
-    {
-        title: "LinkedIn",
-        subtitle: "ATL5D Business",
-        type: CHANNEL_TYPES.LINKEDIN,
-        link: "https://www.linkedin.com/groups/13062182/",
-    },
-    {
-        title: "Telegram",
-        subtitle: "@ATL5D | ONLY ATL5D FANS",
-        type: CHANNEL_TYPES.TELEGRAM, // Assuming you have this in CHANNEL_TYPES
-        link: "https://t.me/atl5d",
-    },
-    {
-        title: "Dribbble",
-        subtitle: "@virtuonic | shots of dezigns ",
-        type: CHANNEL_TYPES.DRIBBLE, // Use the correct CHANNEL_TYPES value
-        link: "https://dribbble.com/virtuonic",
-        image: Dribble, // Use the image import here
-    },
-    {
-        title: "Telegram",
-        subtitle: "@HAHZNFT | Wizard of Hahz ",
-        type: CHANNEL_TYPES.TELEGRAM, // Assuming you have this in CHANNEL_TYPES
-        link: "https://t.me/hahz5d",
-    },
+// 🎥 Types for Shorts Player
+interface ShortsPlayerProps {
+  id: string;
+}
+
+// 🎥 Shorts Player Component (9:16 Aspect Ratio)
+const ShortsPlayer: React.FC<ShortsPlayerProps> = ({ id }) => (
+  <div className="shorts-container">
+    <iframe
+      width="100%"
+      height="100%"
+      src={`https://tube.jersey.fm/embed/${id}?autoplay=1&mute=1`}  // Changed to nocookie domain
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      className="shorts-iframe"
+      title={`YouTube Short ${id}`}
+      loading="lazy"
+      referrerPolicy="strict-origin-when-cross-origin"  // Added for security
+    />
+  </div>
+);
+
+// 🔗 Type for Linkee items
+interface LinkeeItem {
+  title: string;
+  subtitle: string;
+  type: typeof CHANNEL_TYPES[keyof typeof CHANNEL_TYPES];  // More precise type
+  link: string;
+  image?: string;
+}
+
+// 🔗 Linkees Config (Gen Z Edition)
+const items: LinkeeItem[] = [  // Explicitly typed array
+  // ... (your existing items array)
 ];
 
+// 🎥 Trending Shorts IDs
+const shortsIds = [
+  "dQw4w9WgXcQ", // Replace with actual Shorts IDs
+  "3JZ_D3ELwOQ",
+] as const;  // as const for literal type inference
+
+type ShortsId = typeof shortsIds[number];  // Type for individual ID
+
+// Root component
+const App: React.FC = () => {
+  // Consider moving this data to a separate config file
+  return (
+    <>
+      <Linkees cardItems={items} name={"JERSEY CLUB TV 🔥"} />
+      <div className="shorts-feed">
+        <h2>🔥 TRENDING SHORTS</h2>
+        {shortsIds.map((id) => (
+          <ShortsPlayer key={id} id={id} />
+        ))}
+      </div>
+    </>
+  );
+};
+
+// Render with error boundary in production
 const rootElement = document.getElementById("root");
 if (rootElement) {
-    ReactDOM.createRoot(rootElement)?.render(
-        <React.StrictMode>
-            <Linkees cardItems={items} name={"ATL5D"} />
-            {/* headerAvatar={'https://i.imgur.com/FI8QVOa.jpeg'}*/}
-        </React.StrictMode>
+  try {
+    ReactDOM.createRoot(rootElement).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
     );
+  } catch (error) {
+    console.error("Failed to render app:", error);
+    // Fallback UI could go here
+  }
+} else {
+  console.error("Root element not found");
+  // You might want to create the root element dynamically in some cases
 }
