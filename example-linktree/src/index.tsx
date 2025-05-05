@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Dribble from "./assets/images/dribble.png";
 import Linkees, { CHANNEL_TYPES } from "linkees";
 import "./css/normalize.css";
 
@@ -15,7 +14,7 @@ const ShortsPlayer: React.FC<ShortsPlayerProps> = ({ id }) => (
     <iframe
       width="100%"
       height="100%"
-      src={`https://tube.jersey.fm/embed/${id}?autoplay=1&mute=1`}  // Changed to nocookie domain
+      src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1`}  // Changed to nocookie domain
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
@@ -37,14 +36,22 @@ interface LinkeeItem {
 }
 
 // 🔗 Linkees Config (Gen Z Edition)
-const items: LinkeeItem[] = [  // Explicitly typed array
-  // ... (your existing items array)
+const items: LinkeeItem[] = [
+  // Add your actual items here, e.g.:
+  // {
+  //   title: "Example Linkee",
+  //   subtitle: "Short Description",
+  //   type: "link",
+  //   link: "https://example.com",
+  //   image: "https://example.com/image.jpg"
+  // },
 ];
 
 // 🎥 Trending Shorts IDs
 const shortsIds = [
-  "dQw4w9WgXcQ", // Replace with actual Shorts IDs
-  "3JZ_D3ELwOQ",
+  "fi6Lu65fB5E", // Replace with actual Shorts IDs
+  "QjBv_ctwf3A",
+  "XUCs4e0d-MM",
 ] as const;  // as const for literal type inference
 
 type ShortsId = typeof shortsIds[number];  // Type for individual ID
@@ -54,9 +61,11 @@ const App: React.FC = () => {
   // Consider moving this data to a separate config file
   return (
     <>
-      <Linkees cardItems={items} name={"JERSEY CLUB TV 🔥"} />
+      <Linkees cardItems={items} name={"JERSEY CLUB TUBE. 🔥"} />
       <div className="shorts-feed">
-        <h2>🔥 TRENDING SHORTS</h2>
+        <h2>
+          <span role="img" aria-label="fire emoji">🔥</span> TRENDING SHORTS
+        </h2>
         {shortsIds.map((id) => (
           <ShortsPlayer key={id} id={id} />
         ))}
