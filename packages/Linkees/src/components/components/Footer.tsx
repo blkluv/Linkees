@@ -7,7 +7,7 @@ function Footer(): JSX.Element {
   return (
     <div className="Footer container">
       <p>
-        Made with <span className="heart">❤️</span> by <a href={'https://twitter.com/heysagnik'}>Sagnik Sahoo</a>
+        Powered by <span className="heart">❤️</span> by <a href={'https://twitter.com/heysagnik'}>JERSEY.FM</a> Musik
       </p>
     </div>
   );
