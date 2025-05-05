@@ -72,7 +72,7 @@ const App: React.FC = () => {
         <h2>
           <span role="img" aria-label="fire emoji">🔥</span> JERSEY CLUB SHORTS
         </h2>
-        {shortsIds.map((id) => (
+        {shortsIds.map((id: ShortsId) => (
           <ShortsPlayer key={id} id={id} />
         ))}
       </div>
