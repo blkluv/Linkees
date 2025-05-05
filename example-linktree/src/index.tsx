@@ -52,6 +52,12 @@ const shortsIds = [
   "fi6Lu65fB5E", // Replace with actual Shorts IDs
   "QjBv_ctwf3A",
   "XUCs4e0d-MM",
+  "GsvGKb9ENcM",
+  "go_4XaGvH0c",
+  "Xrq_TDyABx8",
+  "kLRrHKZOeSI",
+  "hTpE1cDB4aM",
+  "LHkvQQmnuUU",
 ] as const;  // as const for literal type inference
 
 type ShortsId = typeof shortsIds[number];  // Type for individual ID
@@ -61,10 +67,10 @@ const App: React.FC = () => {
   // Consider moving this data to a separate config file
   return (
     <>
-      <Linkees cardItems={items} name={"JERSEY CLUB TUBE. 🔥"} />
+      <Linkees cardItems={items} name={"JERSEY.FM TUBE. 🔥"} />
       <div className="shorts-feed">
         <h2>
-          <span role="img" aria-label="fire emoji">🔥</span> TRENDING SHORTS
+          <span role="img" aria-label="fire emoji">🔥</span> JERSEY CLUB SHORTS
         </h2>
         {shortsIds.map((id) => (
           <ShortsPlayer key={id} id={id} />
