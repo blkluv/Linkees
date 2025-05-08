@@ -26,26 +26,6 @@ const ShortsPlayer: React.FC<ShortsPlayerProps> = ({ id }) => (
   </div>
 );
 
-// 🔗 Type for Linkee items
-interface LinkeeItem {
-  title: string;
-  subtitle: string;
-  type: keyof typeof CHANNEL_TYPES;
-  link: string;
-  image?: string;
-}
-
-// 🔗 Linkees Config (Gen Z Edition)
-const items: LinkeeItem[] = [
-  {
-    title: "Example Linkee",
-    subtitle: "Short Description",
-    type: "WEBSITE",
-    link: "https://example.com",
-    image: "https://example.com/image.jpg",
-  },
-];
-
 // 🎥 Trending Shorts IDs
 const shortsIds = [
   "fi6Lu65fB5E",
@@ -66,7 +46,18 @@ type ShortsId = typeof shortsIds[number];
 const App: React.FC = () => {
   return (
     <>
-      <Linkees cardItems={items} name={"JERSEY.FM TUBE. 🔥"} />
+      <header className="header">
+        <img
+          src="/logo.png"
+          alt="Jersey.FM Logo"
+          className="header-logo"
+        />
+        <h1 className="header-title">JERSEY.FM TUBE</h1>
+        <p className="header-description">
+          The hottest Jersey Club Shorts. Updated daily with 🔥 content direct from the streets.
+        </p>
+      </header>
+
       <div className="shorts-feed">
         <h2>
           <span role="img" aria-label="fire emoji">
