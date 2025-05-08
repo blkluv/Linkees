@@ -14,14 +14,14 @@ const ShortsPlayer: React.FC<ShortsPlayerProps> = ({ id }) => (
     <iframe
       width="100%"
       height="100%"
-      src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1`}  // Changed to nocookie domain
+      src={`https://www.youtube.com/embed/$${id}?autoplay=1&mute=1`}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
       className="shorts-iframe"
       title={`YouTube Short ${id}`}
       loading="lazy"
-      referrerPolicy="strict-origin-when-cross-origin"  // Added for security
+      referrerPolicy="strict-origin-when-cross-origin"
     />
   </div>
 );
@@ -30,26 +30,25 @@ const ShortsPlayer: React.FC<ShortsPlayerProps> = ({ id }) => (
 interface LinkeeItem {
   title: string;
   subtitle: string;
-  type: typeof CHANNEL_TYPES[keyof typeof CHANNEL_TYPES];  // More precise type
+  type: keyof typeof CHANNEL_TYPES; // Corrected type
   link: string;
   image?: string;
 }
 
 // 🔗 Linkees Config (Gen Z Edition)
 const items: LinkeeItem[] = [
-  // Add your actual items here, e.g.:
-  // {
-  //   title: "Example Linkee",
-  //   subtitle: "Short Description",
-  //   type: "link",
-  //   link: "https://example.com",
-  //   image: "https://example.com/image.jpg"
-  // },
+  {
+    title: "Example Linkee",
+    subtitle: "Short Description",
+    type: "link", // Corrected value to a string literal
+    link: "https://example.com",
+    image: "https://example.com/image.jpg",
+  },
 ];
 
 // 🎥 Trending Shorts IDs
 const shortsIds = [
-  "fi6Lu65fB5E", // Replace with actual Shorts IDs
+  "fi6Lu65fB5E",
   "QjBv_ctwf3A",
   "XUCs4e0d-MM",
   "GsvGKb9ENcM",
@@ -58,21 +57,23 @@ const shortsIds = [
   "kLRrHKZOeSI",
   "hTpE1cDB4aM",
   "LHkvQQmnuUU",
-] as const;  // as const for literal type inference
+] as const;
 
-type ShortsId = typeof shortsIds[number];  // Type for individual ID
+type ShortsId = typeof shortsIds[number]; // Type for individual Shorts ID
 
-// Root component
+// Root App Component
 const App: React.FC = () => {
-  // Consider moving this data to a separate config file
   return (
     <>
       <Linkees cardItems={items} name={"JERSEY.FM TUBE. 🔥"} />
       <div className="shorts-feed">
         <h2>
-          <span role="img" aria-label="fire emoji">🔥</span> JERSEY CLUB SHORTS
+          <span role="img" aria-label="fire emoji">
+            🔥
+          </span>{" "}
+          JERSEY CLUB SHORTS
         </h2>
-        {shortsIds.map((id: ShortsId) => (
+        {shortsIds.map((id) => ( // Removed the explicit type annotation here.
           <ShortsPlayer key={id} id={id} />
         ))}
       </div>
@@ -80,7 +81,7 @@ const App: React.FC = () => {
   );
 };
 
-// Render with error boundary in production
+// Render to the DOM
 const rootElement = document.getElementById("root");
 if (rootElement) {
   try {
@@ -91,9 +92,7 @@ if (rootElement) {
     );
   } catch (error) {
     console.error("Failed to render app:", error);
-    // Fallback UI could go here
   }
 } else {
   console.error("Root element not found");
-  // You might want to create the root element dynamically in some cases
 }
