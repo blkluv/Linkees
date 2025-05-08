@@ -73,7 +73,23 @@ const App: React.FC = () => {
           >
             LUV NFT FUN
           </a>{" "}
-          social club for 100% crypto back. Turn up and turn your vibes into Jersey Club AR 🎶
+          social club for 100% in $ETH crypto. Solana{" "}
+          <a
+            href="https://pump.fun/coin/FM5eNvujxrqYEnzsfSDTT1NGDXkP49sAQbCNQ6XNpump"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            $JERSEY
+          </a>{" "}
+          memecoins are used for tipping Jersey Club 🎶 creators on 📺 TV or our livestream
+          🍊 {" "}
+          <a
+            href="https://orange.jersey.fm/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ORANGE.
+          </a>
         </p>
       </header>
 
