@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Linkees, { CHANNEL_TYPES } from "linkees";
 import "./css/normalize.css";
 
 // 🎥 Types for Shorts Player
