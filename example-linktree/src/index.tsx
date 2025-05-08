@@ -47,20 +47,24 @@ const App: React.FC = () => {
     <>
       <header className="header">
         <img
-          src="/logo.png"
+          src="https://i.imgur.com/epDdeaf.jpeg"
           alt="Jersey.FM Logo"
           className="header-logo"
         />
         <h1 className="header-title">JERSEY.FM TUBE</h1>
         <p className="header-description">
-          The hottest Jersey Club Shorts. Updated daily with 🔥 content direct from the streets.
+          The hottest Jersey Club ReelMix Shorts. You can mint your fav 🔥 ReelMix on our{" "}
+          <a href="https://tv.jersey.fm" target="_blank" rel="noopener noreferrer">
+            📺 TV
+          </a>{" "}
+          then resell them.
         </p>
       </header>
 
       <div className="shorts-feed">
         <h2>
           <span role="img" aria-label="fire emoji">
-            🔥
+          💿
           </span>{" "}
           JERSEY CLUB SHORTS
         </h2>
