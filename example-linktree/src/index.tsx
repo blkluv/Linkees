@@ -27,6 +27,10 @@ const ShortsPlayer: React.FC<ShortsPlayerProps> = ({ id }) => (
 
 // 🎥 Trending Shorts IDs
 const shortsIds = [
+  "Py9VfRsFZbQ",
+  "2yQrUky_2tE",
+  "5SdG_cQs_ec",
+  "sblsLUzuCjc",
   "fi6Lu65fB5E",
   "QjBv_ctwf3A",
   "XUCs4e0d-MM",
@@ -41,30 +45,42 @@ const shortsIds = [
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 type ShortsId = typeof shortsIds[number];
 
-// Root App Component
+// 🚀 Root App Component
 const App: React.FC = () => {
   return (
     <>
       <header className="header">
         <img
-          src="https://i.imgur.com/epDdeaf.jpeg"
+          src="https://i.imgur.com/MBZMIXq.jpeg"
           alt="Jersey.FM Logo"
           className="header-logo"
         />
         <h1 className="header-title">JERSEY.FM TUBE</h1>
         <p className="header-description">
-          The hottest Jersey Club ReelMix Shorts. You can mint your fav 🔥 ReelMix on our{" "}
+          The hottest Jersey Club ReelMix Shorts on YouTube, powered by{" "}
+          <a href="https://jersey.fm" target="_blank" rel="noopener noreferrer">
+            JERSEY.FM
+          </a>
+          . Mint your fav 🔥 ReelMix on{" "}
           <a href="https://tv.jersey.fm" target="_blank" rel="noopener noreferrer">
             📺 TV
+          </a>
+          , then flip it in our{" "}
+          <a
+            href="https://fun.luvnft.com/groups/jersey-club-fm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LUV NFT FUN
           </a>{" "}
-          then resell them.
+          social club for 100% crypto back. Turn up and turn your vibes into Jersey Club AR 🎶
         </p>
       </header>
 
       <div className="shorts-feed">
         <h2>
-          <span role="img" aria-label="fire emoji">
-          💿
+          <span role="img" aria-label="vinyl emoji">
+            💿
           </span>{" "}
           JERSEY CLUB SHORTS
         </h2>
@@ -76,7 +92,7 @@ const App: React.FC = () => {
   );
 };
 
-// Render to the DOM
+// 🛠️ Render to the DOM
 const rootElement = document.getElementById("root");
 if (rootElement) {
   try {
