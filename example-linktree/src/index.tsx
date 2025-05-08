@@ -14,7 +14,7 @@ const ShortsPlayer: React.FC<ShortsPlayerProps> = ({ id }) => (
     <iframe
       width="100%"
       height="100%"
-      src={`https://www.youtube.com/embed/$${id}?autoplay=1&mute=1`}
+      src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1`}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
@@ -30,7 +30,7 @@ const ShortsPlayer: React.FC<ShortsPlayerProps> = ({ id }) => (
 interface LinkeeItem {
   title: string;
   subtitle: string;
-  type: keyof typeof CHANNEL_TYPES; // Corrected type
+  type: keyof typeof CHANNEL_TYPES;
   link: string;
   image?: string;
 }
@@ -40,7 +40,7 @@ const items: LinkeeItem[] = [
   {
     title: "Example Linkee",
     subtitle: "Short Description",
-    type: "link", // Corrected value to a string literal
+    type: "link",
     link: "https://example.com",
     image: "https://example.com/image.jpg",
   },
@@ -59,7 +59,8 @@ const shortsIds = [
   "LHkvQQmnuUU",
 ] as const;
 
-type ShortsId = typeof shortsIds[number]; // Type for individual Shorts ID
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type ShortsId = typeof shortsIds[number];
 
 // Root App Component
 const App: React.FC = () => {
@@ -73,7 +74,7 @@ const App: React.FC = () => {
           </span>{" "}
           JERSEY CLUB SHORTS
         </h2>
-        {shortsIds.map((id) => ( // Removed the explicit type annotation here.
+        {shortsIds.map((id) => (
           <ShortsPlayer key={id} id={id} />
         ))}
       </div>
