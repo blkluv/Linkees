@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./css/normalize.css";
 
 // ✅ NEW: Orbis Comments Component
-import { OrbisComments } from "./components/OrbisComments";
+import { OrbisComments } from "./components/OrbisComments.tsx";
 
 // 🎥 Types for Shorts Player
 interface ShortsPlayerProps {
