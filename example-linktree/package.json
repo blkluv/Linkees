@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@orbisclub/orbis-sdk": "^0.4.89",
     "@richardnbanks/astro-loader-youtube": "^0.0.2",
     "@sinclair/typebox": "^0.24.51",
     "@testing-library/jest-dom": "^5.16.5",
@@ -26,15 +27,25 @@
     ],
     "overrides": [
       {
-        "files": ["**/*.ts?(x)"],
+        "files": [
+          "**/*.ts?(x)"
+        ],
         "parser": "@typescript-eslint/parser",
         "parserOptions": {
-          "project": ["./tsconfig.json"]
+          "project": [
+            "./tsconfig.json"
+          ]
         },
-        "plugins": ["@typescript-eslint"],
+        "plugins": [
+          "@typescript-eslint"
+        ],
         "rules": {
-          "@typescript-eslint/no-unused-vars": ["warn"],
-          "@typescript-eslint/explicit-function-return-type": ["off"]
+          "@typescript-eslint/no-unused-vars": [
+            "warn"
+          ],
+          "@typescript-eslint/explicit-function-return-type": [
+            "off"
+          ]
         }
       }
     ]
