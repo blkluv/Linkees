@@ -40,7 +40,7 @@ const items: LinkeeItem[] = [
   {
     title: "Example Linkee",
     subtitle: "Short Description",
-    type: "link",
+    type: "WEBSITE",
     link: "https://example.com",
     image: "https://example.com/image.jpg",
   },
