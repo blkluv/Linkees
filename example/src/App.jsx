@@ -3,32 +3,32 @@ import "linkees/dist/style.css";
 import avatar from "./assets/avatar.jpeg";
 
 const cardItems = [
-  // 🔹 Active Auctions Section
+  // 🔹 Active Auctions
   {
     title: "🎬 Active RFP.AUCTIONS",
-    subtitle: "Watch 1-minute RFP videos on @RFPTOK",
+    subtitle: "Watch 1-min video pitches & vote your favorite 🔥",
     type: CHANNEL_TYPES.TIKTOK,
     link: "https://www.tiktok.com/@rfptok",
   },
 
-  // 🔹 RFP Process Blueprint
+  // 🔹 RFP Process Overview
   {
-    title: "🧩 The RFP Process",
-    subtitle: "1️⃣ Submit ▶ 2️⃣ Pitch ▶ 3️⃣ Win ▶ 4️⃣ Deliver",
+    title: "🧩 How It Works",
+    subtitle: "1️⃣ Submit ▶ 2️⃣ Pitch ▶ 3️⃣ Vote ▶ 4️⃣ Deliver",
     type: CHANNEL_TYPES.WEBSITE,
-    link: "https://rfp.auction", // keep root for clarity
+    link: "https://rfp.auction",
   },
 
-  // 🔹 RFP Services Section
+  // 🔹 Creator + Brand Services
   {
-    title: "⚡️ Turn RFP Into a 1-Min Video",
-    subtitle: "🎥 We script + shoot your RFP intro in 24 hrs",
+    title: "⚡️ Turn Your RFP Into a Video",
+    subtitle: "🎥 We script + edit your 60-second intro in 24 hrs",
     type: CHANNEL_TYPES.STRIPE,
-    link: "https://buy.stripe.com/", // replace w/ product link
+    link: "https://buy.stripe.com/", // replace with live Stripe product
   },
   {
     title: "🎤 AR Mic Effect",
-    subtitle: "🤳 Branded mic filter for your challenge (2-3 days)",
+    subtitle: "🤳 Custom TikTok filter for your challenge (2-3 days)",
     type: CHANNEL_TYPES.STRIPE,
     link: "https://buy.stripe.com/",
   },
@@ -39,42 +39,42 @@ const cardItems = [
     link: "https://buy.stripe.com/",
   },
   {
-    title: "📲 LUMEEBOOTH Milestones",
-    subtitle: "🎯 Track project progress w/ AR proof updates",
+    title: "📲 Track Milestones",
+    subtitle: "🎯 LUMEE BOOTH AR updates show verified progress",
     type: CHANNEL_TYPES.WEBSITE,
     link: "https://lumeebooth.com",
   },
 
-  // 🔹 UGC Interaction
+  // 🔹 UGC Participation
   {
-    title: "💬 RFP Questions",
-    subtitle: "Ask your RFP question in a fun UGC video 🧠",
+    title: "💬 Ask a Question",
+    subtitle: "Submit your RFP question as a 1-min UGC video 🧠",
     type: CHANNEL_TYPES.YOUTUBE,
     link: "https://youtube.com/@rfpit?si=72kl5w-4xIX1i1a1",
   },
   {
-    title: "🎥 RFP Responses",
-    subtitle: "Watch creators pitch their ideas in 60 seconds 🚀",
+    title: "🎥 Submit a Response",
+    subtitle: "Pitch your idea in 60 seconds & earn votes 🚀",
     type: CHANNEL_TYPES.YOUTUBE,
     link: "https://youtube.com/@rfpit?si=72kl5w-4xIX1i1a1",
   },
 
-  // 🔹 Socials
+  // 🔹 Social & Network
   {
     title: "🎯 @RFPTOK",
-    subtitle: "Follow for live RFP drops and challenges",
+    subtitle: "Follow for daily RFP drops + live challenges",
     type: CHANNEL_TYPES.TIKTOK,
     link: "https://www.tiktok.com/@rfptok",
   },
   {
     title: "💼 LinkedIn",
-    subtitle: "See case studies and city collabs",
+    subtitle: "City collabs, partners, & RFP case studies",
     type: CHANNEL_TYPES.LINKEDIN,
     link: "https://www.linkedin.com/company/rfp-auction/",
   },
   {
-    title: "📸 LUMEEBOOTH",
-    subtitle: "Powering RFP video & AR milestone tracking",
+    title: "📸 LUMEE BOOTH",
+    subtitle: "Powering every RFP milestone w/ AR proof",
     type: CHANNEL_TYPES.WEBSITE,
     link: "https://lumeebooth.com",
   },
@@ -84,7 +84,7 @@ function App() {
   return (
     <Linkees
       name="RFP.AUCTION"
-      bio="🎥 Turn RFPs into 1-minute video challenges. Submit ▶ Pitch ▶ Win ▶ Deliver 🏆"
+      bio="⚡ The world’s first 9-minute RFP process. Turn bids into 1-minute video challenges — Submit ▶ Pitch ▶ Vote ▶ Deliver 🏆"
       cardItems={cardItems}
       headerAvatar={avatar}
     />
