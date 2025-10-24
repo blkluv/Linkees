@@ -1,129 +1,127 @@
-import { Linkees, CHANNEL_TYPES } from "linkees";
-import "linkees/dist/style.css";
 import avatar from "./assets/avatar.jpeg";
 
-// Add image URLs for each card
+// Add working image URLs for each card (no Unsplash)
 const cardItems = [
   // 📲 ACTIVE RFPS SECTION
   {
     title: "📲 Active RFPs (@RFPTOK)",
     subtitle: "Watch 1-min video pitches & vote your favorite 🔥",
-    type: CHANNEL_TYPES.TIKTOK,
+    type: "tiktok",
     link: "https://www.tiktok.com/@rfptok",
     category: "active-rfps",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/tiktok--v1.png",
   },
 
   // 🤔 HOW IT WORKS SECTION
   {
-    title: "🤔 HOW",
+    title: "🤔 HOW IT WORKS",
     subtitle: "1️⃣ Submit ▶ 2️⃣ Pitch ▶ 3️⃣ Vote ▶ 4️⃣ Deliver",
-    type: CHANNEL_TYPES.WEBSITE,
+    type: "website",
     link: "https://rfp.auction",
     category: "how-it-works",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/process.png",
   },
   {
     title: "👀 SHORT RFP VIDEOS (60 SECS)",
     subtitle: "Brands submit challenges as 60-second videos",
-    type: CHANNEL_TYPES.YOUTUBE,
+    type: "youtube",
     link: "https://youtube.com/@rfpit",
     category: "how-it-works",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/video.png",
   },
   {
     title: "🎙️ SHORT RFP REPLIES (60 SECS)",
     subtitle: "Creators pitch solutions in 60-second responses",
-    type: CHANNEL_TYPES.YOUTUBE,
+    type: "youtube",
     link: "https://youtube.com/@rfpit",
     category: "how-it-works",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/microphone.png",
   },
   {
     title: "🏆 ANNOUNCE WINNER",
     subtitle: "Community votes decide the winning proposal",
-    type: CHANNEL_TYPES.TIKTOK,
+    type: "tiktok",
     link: "https://www.tiktok.com/@rfptok",
     category: "how-it-works",
-    image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/trophy.png",
   },
   {
     title: "📈 TRACK MILESTONES",
     subtitle: "AR verification shows real-time progress updates",
-    type: CHANNEL_TYPES.WEBSITE,
+    type: "website",
     link: "https://lumeebooth.com",
     category: "how-it-works",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/analytics.png",
   },
 
   // ⚡️ RAPID SERVICES SECTION
   {
     title: "⚡️ Rapid RFP Question",
     subtitle: "Turn your RFP into a video challenge in 24hrs 🎥",
-    type: CHANNEL_TYPES.STRIPE,
+    type: "stripe",
     link: "https://buy.stripe.com/",
     category: "rapid-services",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/quick-mode-on.png",
   },
   {
     title: "⚡️ Rapid RFP Response", 
     subtitle: "Script + edit your 60-second pitch video 🎬",
-    type: CHANNEL_TYPES.STRIPE,
+    type: "stripe",
     link: "https://buy.stripe.com/",
     category: "rapid-services",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/video-editing.png",
   },
   {
     title: "🎤 AR Mic Effect",
     subtitle: "Custom TikTok filter for your challenge (2-3 days)",
-    type: CHANNEL_TYPES.STRIPE,
+    type: "stripe",
     link: "https://buy.stripe.com/",
     category: "rapid-services",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/augmented-reality.png",
   },
 
   // 🎬 UGC PARTICIPATION SECTION
   {
     title: "💬 UGC (Question)",
     subtitle: "Submit your RFP as a 1-min video challenge 🧠",
-    type: CHANNEL_TYPES.YOUTUBE,
+    type: "youtube",
     link: "https://youtube.com/@rfpit",
     category: "ugc-participation",
-    image: "https://images.unsplash.com/photo-1520333789090-1afc82db536a?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/ask-question.png",
   },
   {
     title: "🎥 UGC (Response)",
     subtitle: "Pitch your solution in 60 seconds & earn votes 🚀",
-    type: CHANNEL_TYPES.YOUTUBE,
+    type: "youtube",
     link: "https://youtube.com/@rfpit",
     category: "ugc-participation",
-    image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/voice-presentation.png",
   },
 
   // 🌐 SOCIAL & NETWORK SECTION
   {
     title: "🎯 @RFPTOK",
     subtitle: "Follow for daily RFP drops + live challenges",
-    type: CHANNEL_TYPES.TIKTOK,
+    type: "tiktok",
     link: "https://www.tiktok.com/@rfptok",
     category: "social-network",
-    image: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/tiktok--v1.png",
   },
   {
     title: "💼 LinkedIn",
     subtitle: "City collabs, partners, & RFP case studies",
-    type: CHANNEL_TYPES.LINKEDIN,
+    type: "linkedin",
     link: "https://www.linkedin.com/company/rfp-auction/",
     category: "social-network",
-    image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/linkedin.png",
   },
   {
     title: "📸 LUMEE BOOTH",
     subtitle: "Powering every RFP milestone w/ AR proof",
-    type: CHANNEL_TYPES.WEBSITE,
+    type: "website",
     link: "https://lumeebooth.com",
     category: "social-network",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=225&fit=crop&auto=format",
+    image: "https://img.icons8.com/color/480/000000/camera.png",
   }
 ];
 
@@ -184,6 +182,9 @@ function App() {
                       src={item.image} 
                       alt={item.title}
                       className="card-image"
+                      onError={(e) => {
+                        e.target.src = "https://img.icons8.com/color/480/000000/image.png";
+                      }}
                     />
                     <div className="card-overlay">
                       <div className="card-icon">
@@ -227,14 +228,14 @@ function App() {
         }
 
         .header-avatar {
-          width: 80px;
-          height: 80px;
+          width: 100px;
+          height: 100px;
           border-radius: 50%;
           border: 3px solid #e50914;
         }
 
         .header-name {
-          font-size: 2rem;
+          font-size: 3rem;
           font-weight: bold;
           margin: 0;
           background: linear-gradient(45deg, #e50914, #ff6b6b);
@@ -244,35 +245,35 @@ function App() {
         }
 
         .header-bio {
-          font-size: 1.1rem;
-          opacity: 0.8;
-          margin: 0.5rem 0 0 0;
-          max-width: 600px;
-          line-height: 1.5;
+          font-size: 1.4rem;
+          opacity: 0.9;
+          margin: 1rem 0 0 0;
+          max-width: 700px;
+          line-height: 1.6;
         }
 
         .category-section {
-          margin-bottom: 3rem;
+          margin-bottom: 4rem;
         }
 
         .category-title {
-          font-size: 1.5rem;
+          font-size: 2.2rem;
           font-weight: bold;
-          margin-bottom: 1rem;
-          padding-left: 0.5rem;
-          border-left: 4px solid #e50914;
+          margin-bottom: 1.5rem;
+          padding-left: 1rem;
+          border-left: 6px solid #e50914;
           color: white;
         }
 
         .cards-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-          gap: 1.5rem;
+          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          gap: 2rem;
         }
 
         .netflix-card {
           background: rgba(255, 255, 255, 0.05);
-          border-radius: 0.75rem;
+          border-radius: 1rem;
           transition: all 0.3s ease;
           border: 1px solid rgba(255, 255, 255, 0.1);
           overflow: hidden;
@@ -282,7 +283,7 @@ function App() {
         .netflix-card:hover {
           transform: scale(1.05);
           border-color: #e50914;
-          box-shadow: 0 10px 30px rgba(229, 9, 20, 0.4);
+          box-shadow: 0 15px 40px rgba(229, 9, 20, 0.4);
         }
 
         .card-link {
@@ -297,6 +298,7 @@ function App() {
           width: 100%;
           padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
           overflow: hidden;
+          background: rgba(255, 255, 255, 0.1);
         }
 
         .card-image {
@@ -305,8 +307,10 @@ function App() {
           left: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           transition: transform 0.3s ease;
+          padding: 1rem;
+          background: rgba(0, 0, 0, 0.3);
         }
 
         .netflix-card:hover .card-image {
@@ -328,15 +332,15 @@ function App() {
           display: flex;
           align-items: flex-end;
           justify-content: flex-end;
-          padding: 1rem;
+          padding: 1.5rem;
         }
 
         .card-icon {
-          font-size: 1.5rem;
+          font-size: 2rem;
           background: rgba(0, 0, 0, 0.7);
           border-radius: 50%;
-          width: 40px;
-          height: 40px;
+          width: 50px;
+          height: 50px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -344,37 +348,37 @@ function App() {
 
         /* Card Content */
         .card-content {
-          padding: 1.5rem;
+          padding: 2rem;
           position: relative;
           background: rgba(0, 0, 0, 0.3);
         }
 
         .card-title {
-          font-size: 1.1rem;
-          font-weight: 600;
-          margin: 0 0 0.5rem 0;
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin: 0 0 1rem 0;
           line-height: 1.3;
           color: white;
         }
 
         .card-subtitle {
-          font-size: 0.9rem;
-          opacity: 0.7;
+          font-size: 1.1rem;
+          opacity: 0.8;
           margin: 0;
-          line-height: 1.4;
-          color: rgba(255, 255, 255, 0.8);
+          line-height: 1.5;
+          color: rgba(255, 255, 255, 0.9);
         }
 
         .card-arrow {
           position: absolute;
-          top: 1.5rem;
-          right: 1.5rem;
+          top: 2rem;
+          right: 2rem;
           opacity: 0;
           transform: translateX(-10px);
           transition: all 0.3s ease;
           font-weight: bold;
           color: #e50914;
-          font-size: 1.2rem;
+          font-size: 1.8rem;
         }
 
         .netflix-card:hover .card-arrow {
@@ -393,9 +397,21 @@ function App() {
             gap: 1rem;
           }
           
+          .header-name {
+            font-size: 2.5rem;
+          }
+          
+          .header-bio {
+            font-size: 1.2rem;
+          }
+          
+          .category-title {
+            font-size: 1.8rem;
+          }
+          
           .cards-grid {
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
           }
         }
 
@@ -403,20 +419,28 @@ function App() {
           .cards-grid {
             grid-template-columns: 1fr;
           }
+          
+          .header-name {
+            font-size: 2rem;
+          }
+          
+          .category-title {
+            font-size: 1.5rem;
+          }
         }
       `}</style>
     </div>
   );
 }
 
-// Helper function remains the same
+// Helper function
 function getIconByType(type) {
   const icons = {
-    [CHANNEL_TYPES.TIKTOK]: "🎵",
-    [CHANNEL_TYPES.YOUTUBE]: "📺", 
-    [CHANNEL_TYPES.WEBSITE]: "🌐",
-    [CHANNEL_TYPES.STRIPE]: "💳",
-    [CHANNEL_TYPES.LINKEDIN]: "💼"
+    "tiktok": "🎵",
+    "youtube": "📺", 
+    "website": "🌐",
+    "stripe": "💳",
+    "linkedin": "💼"
   };
   return icons[type] || "🔗";
 }
