@@ -2,6 +2,7 @@ import { Linkees, CHANNEL_TYPES } from "linkees";
 import "linkees/dist/style.css";
 import avatar from "./assets/avatar.jpeg";
 
+// Add image URLs for each card
 const cardItems = [
   // 📲 ACTIVE RFPS SECTION
   {
@@ -9,7 +10,8 @@ const cardItems = [
     subtitle: "Watch 1-min video pitches & vote your favorite 🔥",
     type: CHANNEL_TYPES.TIKTOK,
     link: "https://www.tiktok.com/@rfptok",
-    category: "active-rfps"
+    category: "active-rfps",
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=225&fit=crop&auto=format", // TikTok vibe
   },
 
   // 🤔 HOW IT WORKS SECTION
@@ -18,35 +20,40 @@ const cardItems = [
     subtitle: "1️⃣ Submit ▶ 2️⃣ Pitch ▶ 3️⃣ Vote ▶ 4️⃣ Deliver",
     type: CHANNEL_TYPES.WEBSITE,
     link: "https://rfp.auction",
-    category: "how-it-works"
+    category: "how-it-works",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop&auto=format", // Process flow
   },
   {
     title: "👀 SHORT RFP VIDEOS (60 SECS)",
     subtitle: "Brands submit challenges as 60-second videos",
     type: CHANNEL_TYPES.YOUTUBE,
     link: "https://youtube.com/@rfpit",
-    category: "how-it-works"
+    category: "how-it-works",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=225&fit=crop&auto=format", // Video creation
   },
   {
     title: "🎙️ SHORT RFP REPLIES (60 SECS)",
     subtitle: "Creators pitch solutions in 60-second responses",
     type: CHANNEL_TYPES.YOUTUBE,
     link: "https://youtube.com/@rfpit",
-    category: "how-it-works"
+    category: "how-it-works",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=225&fit=crop&auto=format", // Presentation
   },
   {
     title: "🏆 ANNOUNCE WINNER",
     subtitle: "Community votes decide the winning proposal",
     type: CHANNEL_TYPES.TIKTOK,
     link: "https://www.tiktok.com/@rfptok",
-    category: "how-it-works"
+    category: "how-it-works",
+    image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=400&h=225&fit=crop&auto=format", // Celebration
   },
   {
     title: "📈 TRACK MILESTONES",
     subtitle: "AR verification shows real-time progress updates",
     type: CHANNEL_TYPES.WEBSITE,
     link: "https://lumeebooth.com",
-    category: "how-it-works"
+    category: "how-it-works",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop&auto=format", // Analytics
   },
 
   // ⚡️ RAPID SERVICES SECTION
@@ -55,21 +62,24 @@ const cardItems = [
     subtitle: "Turn your RFP into a video challenge in 24hrs 🎥",
     type: CHANNEL_TYPES.STRIPE,
     link: "https://buy.stripe.com/",
-    category: "rapid-services"
+    category: "rapid-services",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=225&fit=crop&auto=format", // Fast action
   },
   {
     title: "⚡️ Rapid RFP Response", 
     subtitle: "Script + edit your 60-second pitch video 🎬",
     type: CHANNEL_TYPES.STRIPE,
     link: "https://buy.stripe.com/",
-    category: "rapid-services"
+    category: "rapid-services",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=225&fit=crop&auto=format", // Creator pitching
   },
   {
     title: "🎤 AR Mic Effect",
     subtitle: "Custom TikTok filter for your challenge (2-3 days)",
     type: CHANNEL_TYPES.STRIPE,
     link: "https://buy.stripe.com/",
-    category: "rapid-services"
+    category: "rapid-services",
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=225&fit=crop&auto=format", // AR tech
   },
 
   // 🎬 UGC PARTICIPATION SECTION
@@ -78,14 +88,16 @@ const cardItems = [
     subtitle: "Submit your RFP as a 1-min video challenge 🧠",
     type: CHANNEL_TYPES.YOUTUBE,
     link: "https://youtube.com/@rfpit",
-    category: "ugc-participation"
+    category: "ugc-participation",
+    image: "https://images.unsplash.com/photo-1520333789090-1afc82db536a?w=400&h=225&fit=crop&auto=format", // Question mark
   },
   {
     title: "🎥 UGC (Response)",
     subtitle: "Pitch your solution in 60 seconds & earn votes 🚀",
     type: CHANNEL_TYPES.YOUTUBE,
     link: "https://youtube.com/@rfpit",
-    category: "ugc-participation"
+    category: "ugc-participation",
+    image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&h=225&fit=crop&auto=format", // Answer/solution
   },
 
   // 🌐 SOCIAL & NETWORK SECTION
@@ -94,52 +106,33 @@ const cardItems = [
     subtitle: "Follow for daily RFP drops + live challenges",
     type: CHANNEL_TYPES.TIKTOK,
     link: "https://www.tiktok.com/@rfptok",
-    category: "social-network"
+    category: "social-network",
+    image: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=225&fit=crop&auto=format", // Social media
   },
   {
     title: "💼 LinkedIn",
     subtitle: "City collabs, partners, & RFP case studies",
     type: CHANNEL_TYPES.LINKEDIN,
     link: "https://www.linkedin.com/company/rfp-auction/",
-    category: "social-network"
+    category: "social-network",
+    image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=400&h=225&fit=crop&auto=format", // Professional
   },
   {
     title: "📸 LUMEE BOOTH",
     subtitle: "Powering every RFP milestone w/ AR proof",
     type: CHANNEL_TYPES.WEBSITE,
     link: "https://lumeebooth.com",
-    category: "social-network"
+    category: "social-network",
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=225&fit=crop&auto=format", // AR technology
   }
 ];
 
-// Group items by category for Netflix-style sections
-const categorizedItems = {
-  "active-rfps": {
-    title: "📲 Active RFPs",
-    items: cardItems.filter(item => item.category === "active-rfps")
-  },
-  "how-it-works": {
-    title: "🤔 How It Works", 
-    items: cardItems.filter(item => item.category === "how-it-works")
-  },
-  "rapid-services": {
-    title: "⚡️ Rapid Services",
-    items: cardItems.filter(item => item.category === "rapid-services")
-  },
-  "ugc-participation": {
-    title: "🎬 UGC Participation",
-    items: cardItems.filter(item => item.category === "ugc-participation")
-  },
-  "social-network": {
-    title: "🌐 Social & Network",
-    items: cardItems.filter(item => item.category === "social-network")
-  }
-};
+// ... rest of the categorization code remains the same ...
 
 function App() {
   return (
     <div className="netflix-style-container">
-      {/* Header */}
+      {/* Header - Same as before */}
       <div className="linkees-header">
         <img src={avatar} alt="RFP.AUCTION" className="header-avatar" />
         <div className="header-info">
@@ -150,27 +143,39 @@ function App() {
         </div>
       </div>
 
-      {/* Netflix-style Category Sections */}
+      {/* Netflix-style Category Sections WITH 16:9 IMAGE CARDS */}
       {Object.entries(categorizedItems).map(([categoryKey, category]) => (
         <div key={categoryKey} className="category-section">
           <h2 className="category-title">{category.title}</h2>
           <div className="cards-grid">
             {category.items.map((item, index) => (
-              <div key={index} className="linkee-card">
+              <div key={index} className="netflix-card">
                 <a 
                   href={item.link} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="card-link"
                 >
-                  <div className="card-icon">
-                    {getIconByType(item.type)}
+                  {/* 16:9 Image Container */}
+                  <div className="card-image-container">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="card-image"
+                    />
+                    <div className="card-overlay">
+                      <div className="card-icon">
+                        {getIconByType(item.type)}
+                      </div>
+                    </div>
                   </div>
+                  
+                  {/* Card Content */}
                   <div className="card-content">
                     <h3 className="card-title">{item.title}</h3>
                     <p className="card-subtitle">{item.subtitle}</p>
+                    <div className="card-arrow">▶</div>
                   </div>
-                  <div className="card-arrow">→</div>
                 </a>
               </div>
             ))}
@@ -234,46 +239,93 @@ function App() {
 
         .cards-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-          gap: 1rem;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 1.5rem;
         }
 
-        .linkee-card {
-          background: rgba(255, 255, 255, 0.1);
+        .netflix-card {
+          background: rgba(255, 255, 255, 0.05);
           border-radius: 0.75rem;
           transition: all 0.3s ease;
           border: 1px solid rgba(255, 255, 255, 0.1);
+          overflow: hidden;
+          position: relative;
         }
 
-        .linkee-card:hover {
-          transform: translateY(-4px);
-          background: rgba(255, 255, 255, 0.15);
+        .netflix-card:hover {
+          transform: scale(1.05);
           border-color: #e50914;
-          box-shadow: 0 8px 25px rgba(229, 9, 20, 0.3);
+          box-shadow: 0 10px 30px rgba(229, 9, 20, 0.4);
         }
 
         .card-link {
-          display: flex;
-          align-items: center;
-          padding: 1.5rem;
+          display: block;
           text-decoration: none;
           color: inherit;
-          gap: 1rem;
+        }
+
+        /* 16:9 Image Container */
+        .card-image-container {
+          position: relative;
+          width: 100%;
+          padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+          overflow: hidden;
+        }
+
+        .card-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .netflix-card:hover .card-image {
+          transform: scale(1.1);
+        }
+
+        .card-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 0.1) 50%,
+            rgba(0, 0, 0, 0.8) 100%
+          );
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          padding: 1rem;
         }
 
         .card-icon {
           font-size: 1.5rem;
-          flex-shrink: 0;
+          background: rgba(0, 0, 0, 0.7);
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
+        /* Card Content */
         .card-content {
-          flex: 1;
+          padding: 1.5rem;
+          position: relative;
         }
 
         .card-title {
           font-size: 1.1rem;
           font-weight: 600;
           margin: 0 0 0.5rem 0;
+          line-height: 1.3;
         }
 
         .card-subtitle {
@@ -284,14 +336,18 @@ function App() {
         }
 
         .card-arrow {
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
           opacity: 0;
           transform: translateX(-10px);
           transition: all 0.3s ease;
           font-weight: bold;
           color: #e50914;
+          font-size: 1.2rem;
         }
 
-        .linkee-card:hover .card-arrow {
+        .netflix-card:hover .card-arrow {
           opacity: 1;
           transform: translateX(0);
         }
@@ -308,6 +364,13 @@ function App() {
           }
           
           .cards-grid {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .cards-grid {
             grid-template-columns: 1fr;
           }
         }
@@ -316,7 +379,7 @@ function App() {
   );
 }
 
-// Helper function to get icons based on channel type
+// Helper function remains the same
 function getIconByType(type) {
   const icons = {
     [CHANNEL_TYPES.TIKTOK]: "🎵",
