@@ -10,7 +10,7 @@ const cardItems = [
     type: "tiktok",
     link: "https://www.tiktok.com/@rfptok",
     category: "active-rfps",
-    image: "https://img.icons8.com/color/480/000000/tiktok--v1.png",
+    image: "https://i.imgur.com/utL4kuW.png",
   },
 
   // 🤔 HOW IT WORKS SECTION
@@ -20,23 +20,23 @@ const cardItems = [
     type: "website",
     link: "https://rfp.auction",
     category: "how-it-works",
-    image: "https://img.icons8.com/color/480/000000/process.png",
+    image: "https://i.imgur.com/usyzFi1.png",
   },
   {
-    title: "👀 SHORT RFP VIDEOS (60 SECS)",
+    title: "🎦 SHORT RFP VIDEOS (60 SECS)",
     subtitle: "Brands submit challenges as 60-second videos",
     type: "youtube",
     link: "https://youtube.com/@rfpit",
     category: "how-it-works",
-    image: "https://img.icons8.com/color/480/000000/video.png",
+    image: "https://i.imgur.com/JOBqLYx.png",
   },
   {
-    title: "🎙️ SHORT RFP REPLIES (60 SECS)",
+    title: "🗣️ SHORT RFP REPLIES (60 SECS)",
     subtitle: "Creators pitch solutions in 60-second responses",
     type: "youtube",
     link: "https://youtube.com/@rfpit",
     category: "how-it-works",
-    image: "https://img.icons8.com/color/480/000000/microphone.png",
+    image: "https://i.imgur.com/t4KQBSk.png",
   },
   {
     title: "🏆 ANNOUNCE WINNER",
@@ -44,26 +44,26 @@ const cardItems = [
     type: "tiktok",
     link: "https://www.tiktok.com/@rfptok",
     category: "how-it-works",
-    image: "https://img.icons8.com/color/480/000000/trophy.png",
+    image: "https://i.imgur.com/juu9uzG.png",
   },
   {
     title: "📈 TRACK MILESTONES",
     subtitle: "AR verification shows real-time progress updates",
     type: "website",
-    link: "https://lumeebooth.com",
+    link: "https://app.lumeebooth.com",
     category: "how-it-works",
-    image: "https://img.icons8.com/color/480/000000/analytics.png",
+    image: "https://i.imgur.com/hbQCLHt.png",
   },
 
   // ⚡️ RAPID SERVICES SECTION
   {
-    title: "⚡️ RFP Challenge",
+    title: "🎥 RFP Challenge",
     subtitle:
       "🎥 Turn your long boring RFP into an interactive social video challenge in one business day. 💰 $7,500",
     type: "stripe",
     link: "https://buy.stripe.com/aFafZh8OR8GW0Gj36V5wI16",
     category: "rapid-services",
-    image: "https://img.icons8.com/color/480/000000/quick-mode-on.png",
+    image: "https://i.imgur.com/R7C5ozc.png",
   },
   {
     title: "⚡️ Rapid RFP Response",
@@ -72,7 +72,7 @@ const cardItems = [
     type: "stripe",
     link: "https://buy.stripe.com/8x24gz4yBcXc4Wz5f35wI13",
     category: "rapid-services",
-    image: "https://img.icons8.com/color/480/000000/video-editing.png",
+    image: "https://i.imgur.com/O5DJhbX.png",
   },
   {
     title: "🎙️ TikTok RFP UGC Mic",
@@ -81,7 +81,7 @@ const cardItems = [
     type: "stripe",
     link: "https://buy.stripe.com/4gMbJ1c136yOgFh6j75wI17",
     category: "rapid-services",
-    image: "https://img.icons8.com/color/480/000000/augmented-reality.png",
+    image: "https://i.imgur.com/xy0fn9z.png",
   },
   {
     title: "🧙🏽‍♂️ RFP Expert Consultation",
@@ -90,25 +90,7 @@ const cardItems = [
     type: "stripe",
     link: "https://buy.stripe.com/aFa9AT4yB3mCcp1fTH5wI14",
     category: "rapid-services",
-    image: "https://img.icons8.com/color/480/000000/wizard.png",
-  },
-
-  // 🎬 UGC PARTICIPATION SECTION
-  {
-    title: "💬 UGC (Question)",
-    subtitle: "Submit your RFP as a 1-min video challenge 🧠",
-    type: "youtube",
-    link: "https://youtube.com/@rfpit",
-    category: "ugc-participation",
-    image: "https://img.icons8.com/color/480/000000/ask-question.png",
-  },
-  {
-    title: "🎥 UGC (Response)",
-    subtitle: "Pitch your solution in 60 seconds & earn votes 🚀",
-    type: "youtube",
-    link: "https://youtube.com/@rfpit",
-    category: "ugc-participation",
-    image: "https://img.icons8.com/color/480/000000/voice-presentation.png",
+    image: "https://i.imgur.com/CcZQ7v4.png",
   },
 
   // 🌐 SOCIAL & NETWORK SECTION
@@ -183,8 +165,10 @@ function App() {
         <div className="header-info">
           <h1 className="header-name">RFP.AUCTION</h1>
           <p className="header-bio">
-            ⚡ The world's first 9-minute RFP process. Turn bids into 1-minute
-            video challenges — Submit ▶ Pitch ▶ Vote ▶ Deliver 🏆
+            ⚡ We transformed the traditional 90-day RFP cycle into a single day
+            through 1-minute social video challenges and analytics-scored responses.
+            Every RFP, bid, and milestone is verified on blockchain — creating a public,
+            tamper-proof record of performance and accountability. ▶ Pitch ▶ Win ▶ Deliver 🏆
           </p>
         </div>
       </div>
