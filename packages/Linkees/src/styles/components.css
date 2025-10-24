@@ -1,11 +1,13 @@
-/* --------------------------------------------------
-   ⚡ RFP.AUCTION — Modern Component Styles
-   Futuristic Web5 Gradient UI • Wizard of Hahz
--------------------------------------------------- */
+/* -------------------------------------------------------
+   RFP.AUCTION — 9-Minute RFP Video Marketplace
+   Futuristic Animated Gradient Theme
+   Red → Purple → Blue | Wizard of Hahz
+------------------------------------------------------- */
 
-/* FONT + RESET */
+/* Import Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -19,108 +21,121 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #f5f5f5;
   background: linear-gradient(90deg, #ff1a1a 0%, #8a2be2 50%, #1a73ff 100%);
   background-size: 300% 300%;
   animation: gradientShift 10s ease infinite;
+  color: #f5f5f5;
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* GRADIENT ANIMATION */
+/* Gradient Motion */
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* CONTAINER */
+/* Main Container */
 .container {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 3rem 2rem;
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 1.2rem;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
 }
 
-/* HEADINGS */
-h1, h2, h3, h4, h5, h6 {
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+header img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+  font-size: 3.4rem;
   font-weight: 600;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
 
-h1 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-
-h2 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-p {
-  font-size: 1.6rem;
-  color: #e6e6e6;
-  margin-bottom: 2rem;
-}
-
-/* BUTTONS */
-button,
-.button {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 1.4rem;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-button:hover,
-.button:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
-
-/* PRIMARY BUTTON */
-.button-primary {
-  background: linear-gradient(90deg, #ff4b2b, #8a2be2, #1a73ff);
-  border: none;
-}
-
-.button-primary:hover {
-  background: linear-gradient(90deg, #ff6b4b, #9f50ff, #4b9eff);
-  transform: translateY(-3px) scale(1.02);
-}
-
-/* CARDS / SECTIONS */
+/* Card System */
 .card {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 2.5rem;
   margin: 2rem 0;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  backdrop-filter: blur(15px);
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
-/* LINKS */
+/* Dynamic Glows per Channel Type */
+.card[data-type="tiktok"]:hover {
+  box-shadow: 0 0 25px rgba(255, 26, 26, 0.7);
+}
+
+.card[data-type="stripe"]:hover {
+  box-shadow: 0 0 25px rgba(26, 115, 255, 0.7);
+}
+
+.card[data-type="linkedin"]:hover {
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.7);
+}
+
+.card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1.5rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* Buttons */
+button,
+.button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff4b2b, #8a2be2, #1a73ff);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+button:hover,
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(90deg, #ff6b4b, #a34cff, #4b9eff);
+}
+
+/* Links */
 a {
   color: #fff;
   text-decoration: none;
@@ -132,21 +147,21 @@ a:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
-/* VOTE BAR (ANALYTICS VISUAL) */
+/* Voting Bar */
 .vote-bar {
   width: 100%;
   height: 14px;
   border-radius: 7px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 1.5rem 0;
+  background: rgba(255, 255, 255, 0.15);
+  margin-top: 1.5rem;
 }
 
 .vote-bar-fill {
-  width: 90%;
   height: 100%;
-  border-radius: 7px;
+  width: 90%;
   background: linear-gradient(90deg, #ff4b2b, #8a2be2, #1a73ff);
+  border-radius: 7px;
   animation: fillBar 2s ease-in-out forwards;
 }
 
@@ -155,27 +170,28 @@ a:hover {
   to { width: 90%; }
 }
 
-/* FOOTER / FAQ SECTION */
+/* Footer (FAQ Section) */
 footer {
   text-align: center;
   margin-top: 5rem;
-  padding: 3rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4rem 2rem;
   background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
 }
 
 footer h3 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
+  font-weight: 600;
   color: #fff;
 }
 
 footer p {
-  font-size: 1.4rem;
-  max-width: 700px;
-  margin: 0.5rem auto;
+  font-size: 1.5rem;
   color: #ddd;
+  max-width: 700px;
+  margin: 0.8rem auto;
 }
 
 footer h3::after {
@@ -188,7 +204,7 @@ footer h3::after {
   border-radius: 2px;
 }
 
-/* SCROLLBAR */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -197,10 +213,17 @@ footer h3::after {
   border-radius: 10px;
 }
 
-/* RESPONSIVE TWEAKS */
+/* Responsive */
 @media (max-width: 768px) {
-  h1 { font-size: 3.2rem; }
-  h2 { font-size: 2.4rem; }
-  .container { padding: 2rem; }
-  .card { padding: 1.8rem; }
+  header h1 {
+    font-size: 2.6rem;
+  }
+
+  .card {
+    padding: 1.8rem;
+  }
+
+  footer p {
+    font-size: 1.3rem;
+  }
 }
