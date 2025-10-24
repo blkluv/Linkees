@@ -56,29 +56,36 @@ const cardItems = [
 
   // ⚡️ RAPID SERVICES SECTION
   {
-    title: "⚡️ Rapid RFP Question",
-    subtitle: "Turn your RFP into a video challenge in 24hrs 🎥",
+    title: "⚡️ RFP Challenge",
+    subtitle: "🎥 Turn your long boring RFP into a interactive social video challenge in one business day.💰 $7,500",
     type: "stripe",
-    link: "https://buy.stripe.com/",
+    link: "https://buy.stripe.com/aFafZh8OR8GW0Gj36V5wI16",
     category: "rapid-services",
     image: "https://img.icons8.com/color/480/000000/quick-mode-on.png",
   },
   {
     title: "⚡️ Rapid RFP Response", 
-    subtitle: "Script + edit your 60-second pitch video 🎬",
+    subtitle: "⚡️ Receive a rapid RFP expert response via pitch.com in one business day. 💰 $3,500",
     type: "stripe",
-    link: "https://buy.stripe.com/",
+    link: "https://buy.stripe.com/8x24gz4yBcXc4Wz5f35wI13",
     category: "rapid-services",
     image: "https://img.icons8.com/color/480/000000/video-editing.png",
   },
   {
-    title: "🎤 AR Mic Effect",
-    subtitle: "Custom TikTok filter for your challenge (2-3 days)",
+    title: "🎙️ TikTok RFP UGC Mic",
+    subtitle: "Order a branded TikTok RFP UGC (User Generated Content) mic for reel 60 sec replies. 💰 $1,500",
     type: "stripe",
-    link: "https://buy.stripe.com/",
+    link: "https://buy.stripe.com/4gMbJ1c136yOgFh6j75wI17",
     category: "rapid-services",
     image: "https://img.icons8.com/color/480/000000/augmented-reality.png",
   },
+    {
+    title: "🧙🏽‍♂️ RFP Expert Consultation",
+    subtitle: "Book a 60 min call with a RFP.AUCTION wizard to brainstorm your RFP challenge or response. 💰 $1,200",
+    type: "stripe",
+    link: "https://buy.stripe.com/aFa9AT4yB3mCcp1fTH5wI14",
+    category: "rapid-services",
+    image: "https://img.icons8.com/color/480/000000/augmented-
 
   // 🎬 UGC PARTICIPATION SECTION
   {
@@ -111,7 +118,7 @@ const cardItems = [
     title: "💼 LinkedIn",
     subtitle: "City collabs, partners, & RFP case studies",
     type: "linkedin",
-    link: "https://www.linkedin.com/company/rfp-auction/",
+    link: "https://www.linkedin.com/groups/13062182",
     category: "social-network",
     image: "https://img.icons8.com/color/480/000000/linkedin.png",
   },
@@ -119,7 +126,7 @@ const cardItems = [
     title: "📸 LUMEE BOOTH",
     subtitle: "Powering every RFP milestone w/ AR proof",
     type: "website",
-    link: "https://lumeebooth.com",
+    link: "https://app.lumeebooth.com",
     category: "social-network",
     image: "https://img.icons8.com/color/480/000000/camera.png",
   }
