@@ -85,7 +85,7 @@ const cardItems = [
     type: "stripe",
     link: "https://buy.stripe.com/aFa9AT4yB3mCcp1fTH5wI14",
     category: "rapid-services",
-    image: "https://img.icons8.com/color/480/000000/augmented-
+    image: "https://img.icons8.com/color/480/000000/augmented-reality.png",
 
   // 🎬 UGC PARTICIPATION SECTION
   {
