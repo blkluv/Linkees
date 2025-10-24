@@ -11,7 +11,7 @@ const cardItems = [
     type: CHANNEL_TYPES.TIKTOK,
     link: "https://www.tiktok.com/@rfptok",
     category: "active-rfps",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=225&fit=crop&auto=format", // TikTok vibe
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=225&fit=crop&auto=format",
   },
 
   // 🤔 HOW IT WORKS SECTION
@@ -21,7 +21,7 @@ const cardItems = [
     type: CHANNEL_TYPES.WEBSITE,
     link: "https://rfp.auction",
     category: "how-it-works",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop&auto=format", // Process flow
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop&auto=format",
   },
   {
     title: "👀 SHORT RFP VIDEOS (60 SECS)",
@@ -29,7 +29,7 @@ const cardItems = [
     type: CHANNEL_TYPES.YOUTUBE,
     link: "https://youtube.com/@rfpit",
     category: "how-it-works",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=225&fit=crop&auto=format", // Video creation
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=225&fit=crop&auto=format",
   },
   {
     title: "🎙️ SHORT RFP REPLIES (60 SECS)",
@@ -37,7 +37,7 @@ const cardItems = [
     type: CHANNEL_TYPES.YOUTUBE,
     link: "https://youtube.com/@rfpit",
     category: "how-it-works",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=225&fit=crop&auto=format", // Presentation
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=225&fit=crop&auto=format",
   },
   {
     title: "🏆 ANNOUNCE WINNER",
@@ -45,7 +45,7 @@ const cardItems = [
     type: CHANNEL_TYPES.TIKTOK,
     link: "https://www.tiktok.com/@rfptok",
     category: "how-it-works",
-    image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=400&h=225&fit=crop&auto=format", // Celebration
+    image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=400&h=225&fit=crop&auto=format",
   },
   {
     title: "📈 TRACK MILESTONES",
@@ -53,7 +53,7 @@ const cardItems = [
     type: CHANNEL_TYPES.WEBSITE,
     link: "https://lumeebooth.com",
     category: "how-it-works",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop&auto=format", // Analytics
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=225&fit=crop&auto=format",
   },
 
   // ⚡️ RAPID SERVICES SECTION
@@ -63,7 +63,7 @@ const cardItems = [
     type: CHANNEL_TYPES.STRIPE,
     link: "https://buy.stripe.com/",
     category: "rapid-services",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=225&fit=crop&auto=format", // Fast action
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=225&fit=crop&auto=format",
   },
   {
     title: "⚡️ Rapid RFP Response", 
@@ -71,7 +71,7 @@ const cardItems = [
     type: CHANNEL_TYPES.STRIPE,
     link: "https://buy.stripe.com/",
     category: "rapid-services",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=225&fit=crop&auto=format", // Creator pitching
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=225&fit=crop&auto=format",
   },
   {
     title: "🎤 AR Mic Effect",
@@ -79,7 +79,7 @@ const cardItems = [
     type: CHANNEL_TYPES.STRIPE,
     link: "https://buy.stripe.com/",
     category: "rapid-services",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=225&fit=crop&auto=format", // AR tech
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=225&fit=crop&auto=format",
   },
 
   // 🎬 UGC PARTICIPATION SECTION
@@ -89,7 +89,7 @@ const cardItems = [
     type: CHANNEL_TYPES.YOUTUBE,
     link: "https://youtube.com/@rfpit",
     category: "ugc-participation",
-    image: "https://images.unsplash.com/photo-1520333789090-1afc82db536a?w=400&h=225&fit=crop&auto=format", // Question mark
+    image: "https://images.unsplash.com/photo-1520333789090-1afc82db536a?w=400&h=225&fit=crop&auto=format",
   },
   {
     title: "🎥 UGC (Response)",
@@ -97,7 +97,7 @@ const cardItems = [
     type: CHANNEL_TYPES.YOUTUBE,
     link: "https://youtube.com/@rfpit",
     category: "ugc-participation",
-    image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&h=225&fit=crop&auto=format", // Answer/solution
+    image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&h=225&fit=crop&auto=format",
   },
 
   // 🌐 SOCIAL & NETWORK SECTION
@@ -107,7 +107,7 @@ const cardItems = [
     type: CHANNEL_TYPES.TIKTOK,
     link: "https://www.tiktok.com/@rfptok",
     category: "social-network",
-    image: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=225&fit=crop&auto=format", // Social media
+    image: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=225&fit=crop&auto=format",
   },
   {
     title: "💼 LinkedIn",
@@ -115,7 +115,7 @@ const cardItems = [
     type: CHANNEL_TYPES.LINKEDIN,
     link: "https://www.linkedin.com/company/rfp-auction/",
     category: "social-network",
-    image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=400&h=225&fit=crop&auto=format", // Professional
+    image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=400&h=225&fit=crop&auto=format",
   },
   {
     title: "📸 LUMEE BOOTH",
@@ -123,16 +123,38 @@ const cardItems = [
     type: CHANNEL_TYPES.WEBSITE,
     link: "https://lumeebooth.com",
     category: "social-network",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=225&fit=crop&auto=format", // AR technology
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=225&fit=crop&auto=format",
   }
 ];
 
-// ... rest of the categorization code remains the same ...
+// Group items by category for Netflix-style sections
+const categorizedItems = {
+  "active-rfps": {
+    title: "📲 Active RFPs",
+    items: cardItems.filter(item => item.category === "active-rfps")
+  },
+  "how-it-works": {
+    title: "🤔 How It Works", 
+    items: cardItems.filter(item => item.category === "how-it-works")
+  },
+  "rapid-services": {
+    title: "⚡️ Rapid Services",
+    items: cardItems.filter(item => item.category === "rapid-services")
+  },
+  "ugc-participation": {
+    title: "🎬 UGC Participation",
+    items: cardItems.filter(item => item.category === "ugc-participation")
+  },
+  "social-network": {
+    title: "🌐 Social & Network",
+    items: cardItems.filter(item => item.category === "social-network")
+  }
+};
 
 function App() {
   return (
     <div className="netflix-style-container">
-      {/* Header - Same as before */}
+      {/* Header */}
       <div className="linkees-header">
         <img src={avatar} alt="RFP.AUCTION" className="header-avatar" />
         <div className="header-info">
@@ -189,6 +211,7 @@ function App() {
           min-height: 100vh;
           color: white;
           padding: 2rem;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
         .linkees-header {
@@ -200,6 +223,7 @@ function App() {
           background: rgba(255, 255, 255, 0.05);
           border-radius: 1rem;
           backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .header-avatar {
@@ -216,6 +240,7 @@ function App() {
           background: linear-gradient(45deg, #e50914, #ff6b6b);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
         .header-bio {
@@ -223,6 +248,7 @@ function App() {
           opacity: 0.8;
           margin: 0.5rem 0 0 0;
           max-width: 600px;
+          line-height: 1.5;
         }
 
         .category-section {
@@ -235,6 +261,7 @@ function App() {
           margin-bottom: 1rem;
           padding-left: 0.5rem;
           border-left: 4px solid #e50914;
+          color: white;
         }
 
         .cards-grid {
@@ -319,6 +346,7 @@ function App() {
         .card-content {
           padding: 1.5rem;
           position: relative;
+          background: rgba(0, 0, 0, 0.3);
         }
 
         .card-title {
@@ -326,6 +354,7 @@ function App() {
           font-weight: 600;
           margin: 0 0 0.5rem 0;
           line-height: 1.3;
+          color: white;
         }
 
         .card-subtitle {
@@ -333,6 +362,7 @@ function App() {
           opacity: 0.7;
           margin: 0;
           line-height: 1.4;
+          color: rgba(255, 255, 255, 0.8);
         }
 
         .card-arrow {
