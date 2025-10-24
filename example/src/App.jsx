@@ -1,4 +1,5 @@
-import avatar from "./assets/avatar.jpeg";
+// Use remote avatar image
+const avatar = "https://i.imgur.com/sg3RinS.jpeg";
 
 // Add working image URLs for each card (no Unsplash)
 const cardItems = [
@@ -57,15 +58,17 @@ const cardItems = [
   // ⚡️ RAPID SERVICES SECTION
   {
     title: "⚡️ RFP Challenge",
-    subtitle: "🎥 Turn your long boring RFP into a interactive social video challenge in one business day.💰 $7,500",
+    subtitle:
+      "🎥 Turn your long boring RFP into an interactive social video challenge in one business day. 💰 $7,500",
     type: "stripe",
     link: "https://buy.stripe.com/aFafZh8OR8GW0Gj36V5wI16",
     category: "rapid-services",
     image: "https://img.icons8.com/color/480/000000/quick-mode-on.png",
   },
   {
-    title: "⚡️ Rapid RFP Response", 
-    subtitle: "⚡️ Receive a rapid RFP expert response via pitch.com in one business day. 💰 $3,500",
+    title: "⚡️ Rapid RFP Response",
+    subtitle:
+      "⚡️ Receive a rapid RFP expert response via Pitch.com in one business day. 💰 $3,500",
     type: "stripe",
     link: "https://buy.stripe.com/8x24gz4yBcXc4Wz5f35wI13",
     category: "rapid-services",
@@ -73,19 +76,22 @@ const cardItems = [
   },
   {
     title: "🎙️ TikTok RFP UGC Mic",
-    subtitle: "Order a branded TikTok RFP UGC (User Generated Content) mic for reel 60 sec replies. 💰 $1,500",
+    subtitle:
+      "Order a branded TikTok RFP UGC (User Generated Content) mic for 60-sec replies. 💰 $1,500",
     type: "stripe",
     link: "https://buy.stripe.com/4gMbJ1c136yOgFh6j75wI17",
     category: "rapid-services",
     image: "https://img.icons8.com/color/480/000000/augmented-reality.png",
   },
-    {
+  {
     title: "🧙🏽‍♂️ RFP Expert Consultation",
-    subtitle: "Book a 60 min call with a RFP.AUCTION wizard to brainstorm your RFP challenge or response. 💰 $1,200",
+    subtitle:
+      "Book a 60-min call with a RFP.AUCTION wizard to brainstorm your RFP challenge or response. 💰 $1,200",
     type: "stripe",
     link: "https://buy.stripe.com/aFa9AT4yB3mCcp1fTH5wI14",
     category: "rapid-services",
-    image: "https://img.icons8.com/color/480/000000/augmented-reality.png",
+    image: "https://img.icons8.com/color/480/000000/wizard.png",
+  },
 
   // 🎬 UGC PARTICIPATION SECTION
   {
@@ -129,32 +135,44 @@ const cardItems = [
     link: "https://app.lumeebooth.com",
     category: "social-network",
     image: "https://img.icons8.com/color/480/000000/camera.png",
-  }
+  },
 ];
 
 // Group items by category for Netflix-style sections
 const categorizedItems = {
   "active-rfps": {
     title: "📲 Active RFPs",
-    items: cardItems.filter(item => item.category === "active-rfps")
+    items: cardItems.filter((item) => item.category === "active-rfps"),
   },
   "how-it-works": {
-    title: "🤔 How It Works", 
-    items: cardItems.filter(item => item.category === "how-it-works")
+    title: "🤔 How It Works",
+    items: cardItems.filter((item) => item.category === "how-it-works"),
   },
   "rapid-services": {
     title: "⚡️ Rapid Services",
-    items: cardItems.filter(item => item.category === "rapid-services")
+    items: cardItems.filter((item) => item.category === "rapid-services"),
   },
   "ugc-participation": {
     title: "🎬 UGC Participation",
-    items: cardItems.filter(item => item.category === "ugc-participation")
+    items: cardItems.filter((item) => item.category === "ugc-participation"),
   },
   "social-network": {
     title: "🌐 Social & Network",
-    items: cardItems.filter(item => item.category === "social-network")
-  }
+    items: cardItems.filter((item) => item.category === "social-network"),
+  },
 };
+
+// Helper for emoji overlay
+function getIconByType(type) {
+  const icons = {
+    tiktok: "🎵",
+    youtube: "📺",
+    website: "🌐",
+    stripe: "💳",
+    linkedin: "💼",
+  };
+  return icons[type] || "🔗";
+}
 
 function App() {
   return (
@@ -165,42 +183,42 @@ function App() {
         <div className="header-info">
           <h1 className="header-name">RFP.AUCTION</h1>
           <p className="header-bio">
-            ⚡ The world's first 9-minute RFP process. Turn bids into 1-minute video challenges — Submit ▶ Pitch ▶ Vote ▶ Deliver 🏆
+            ⚡ The world's first 9-minute RFP process. Turn bids into 1-minute
+            video challenges — Submit ▶ Pitch ▶ Vote ▶ Deliver 🏆
           </p>
         </div>
       </div>
 
-      {/* Netflix-style Category Sections WITH 16:9 IMAGE CARDS */}
-      {Object.entries(categorizedItems).map(([categoryKey, category]) => (
-        <div key={categoryKey} className="category-section">
+      {/* Netflix-style sections */}
+      {Object.entries(categorizedItems).map(([key, category]) => (
+        <div key={key} className="category-section">
           <h2 className="category-title">{category.title}</h2>
           <div className="cards-grid">
-            {category.items.map((item, index) => (
-              <div key={index} className="netflix-card">
-                <a 
-                  href={item.link} 
-                  target="_blank" 
+            {category.items.map((item, i) => (
+              <div key={i} className="netflix-card">
+                <a
+                  href={item.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="card-link"
                 >
-                  {/* 16:9 Image Container */}
+                  {/* Image */}
                   <div className="card-image-container">
-                    <img 
-                      src={item.image} 
+                    <img
+                      src={item.image}
                       alt={item.title}
                       className="card-image"
-                      onError={(e) => {
-                        e.target.src = "https://img.icons8.com/color/480/000000/image.png";
-                      }}
+                      onError={(e) =>
+                        (e.target.src =
+                          "https://img.icons8.com/color/480/000000/image.png")
+                      }
                     />
                     <div className="card-overlay">
-                      <div className="card-icon">
-                        {getIconByType(item.type)}
-                      </div>
+                      <div className="card-icon">{getIconByType(item.type)}</div>
                     </div>
                   </div>
-                  
-                  {/* Card Content */}
+
+                  {/* Content */}
                   <div className="card-content">
                     <h3 className="card-title">{item.title}</h3>
                     <p className="card-subtitle">{item.subtitle}</p>
@@ -213,6 +231,7 @@ function App() {
         </div>
       ))}
 
+      {/* Styling */}
       <style jsx>{`
         .netflix-style-container {
           background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
@@ -248,13 +267,12 @@ function App() {
           background: linear-gradient(45deg, #e50914, #ff6b6b);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          background-clip: text;
         }
 
         .header-bio {
           font-size: 1.4rem;
           opacity: 0.9;
-          margin: 1rem 0 0 0;
+          margin-top: 1rem;
           max-width: 700px;
           line-height: 1.6;
         }
@@ -293,17 +311,10 @@ function App() {
           box-shadow: 0 15px 40px rgba(229, 9, 20, 0.4);
         }
 
-        .card-link {
-          display: block;
-          text-decoration: none;
-          color: inherit;
-        }
-
-        /* 16:9 Image Container */
         .card-image-container {
           position: relative;
           width: 100%;
-          padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+          padding-bottom: 56.25%;
           overflow: hidden;
           background: rgba(255, 255, 255, 0.1);
         }
@@ -315,9 +326,9 @@ function App() {
           width: 100%;
           height: 100%;
           object-fit: contain;
-          transition: transform 0.3s ease;
           padding: 1rem;
           background: rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease;
         }
 
         .netflix-card:hover .card-image {
@@ -353,27 +364,22 @@ function App() {
           justify-content: center;
         }
 
-        /* Card Content */
         .card-content {
           padding: 2rem;
-          position: relative;
           background: rgba(0, 0, 0, 0.3);
+          position: relative;
         }
 
         .card-title {
           font-size: 1.5rem;
           font-weight: 700;
           margin: 0 0 1rem 0;
-          line-height: 1.3;
-          color: white;
         }
 
         .card-subtitle {
           font-size: 1.1rem;
           opacity: 0.8;
           margin: 0;
-          line-height: 1.5;
-          color: rgba(255, 255, 255, 0.9);
         }
 
         .card-arrow {
@@ -383,8 +389,8 @@ function App() {
           opacity: 0;
           transform: translateX(-10px);
           transition: all 0.3s ease;
-          font-weight: bold;
           color: #e50914;
+          font-weight: bold;
           font-size: 1.8rem;
         }
 
@@ -394,31 +400,15 @@ function App() {
         }
 
         @media (max-width: 768px) {
-          .netflix-style-container {
-            padding: 1rem;
-          }
-          
           .linkees-header {
             flex-direction: column;
             text-align: center;
-            gap: 1rem;
           }
-          
           .header-name {
             font-size: 2.5rem;
           }
-          
-          .header-bio {
-            font-size: 1.2rem;
-          }
-          
-          .category-title {
-            font-size: 1.8rem;
-          }
-          
           .cards-grid {
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
           }
         }
 
@@ -426,30 +416,10 @@ function App() {
           .cards-grid {
             grid-template-columns: 1fr;
           }
-          
-          .header-name {
-            font-size: 2rem;
-          }
-          
-          .category-title {
-            font-size: 1.5rem;
-          }
         }
       `}</style>
     </div>
   );
-}
-
-// Helper function
-function getIconByType(type) {
-  const icons = {
-    "tiktok": "🎵",
-    "youtube": "📺", 
-    "website": "🌐",
-    "stripe": "💳",
-    "linkedin": "💼"
-  };
-  return icons[type] || "🔗";
 }
 
 export default App;
