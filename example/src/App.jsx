@@ -113,28 +113,109 @@ function App() {
   return (
     <div className="page">
       {/* HEADER */}
-      <header className="hero" role="banner">
-        <div className="hero-left">
-          <img src={avatar} alt="RFP.AUCTION logo" className="avatar" loading="lazy" decoding="async" />
-          <div className="copy">
-            <h1 className="brand">RFP.AUCTION</h1>
-            <p className="tagline">
-              ⚡ We reduced the 90-day RFP cycle to 1 day with 1-minute social video challenges and
-              analytics-scored responses. Verified on-chain for accountability. ▶ Pitch ▶ Win ▶ Deliver 🏆
-            </p>
-          </div>
-        </div>
+  <header className="hero">
+  <div className="hero-inner">
+    <img src={avatar} alt="RFP.AUCTION" className="avatar" />
+    <h1 className="brand">RFP.AUCTION</h1>
+    <p className="tagline">
+      ⚡ We reduced the 90-day RFP cycle to 1 day with 1-minute social video challenges and
+      analytics-scored responses. Verified on-chain for accountability. ▶ Pitch ▶ Win ▶ Deliver 🏆
+    </p>
+    <a
+      href="https://t.me/hahznft"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="chat-btn"
+    >
+      💬 Chat with a human
+    </a>
+  </div>
 
-        <a
-          href="https://t.me/hahznft"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cta"
-          aria-label="Chat with Wizard of Hahz on Telegram"
-        >
-          💬 Chat with Wizard of Hahz
-        </a>
-      </header>
+  <style jsx>{`
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #ff75a0 0%, #d287ff 100%);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      backdrop-filter: blur(14px) saturate(150%);
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 540px;
+    }
+
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .brand {
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      font-weight: 800;
+      margin: 0.5rem 0;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .tagline {
+      font-size: clamp(1rem, 3.6vw, 1.1rem);
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 90%;
+      margin: 0 auto 1.5rem;
+    }
+
+    .chat-btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 340px;
+      text-align: center;
+      padding: 0.9rem 1.5rem;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #ffb0d2, #b89bff, #9de4ff);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .chat-btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.45);
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 1.5rem 1rem;
+        border-radius: 20px;
+      }
+      .avatar {
+        width: 72px;
+        height: 72px;
+      }
+      .chat-btn {
+        font-size: 0.95rem;
+      }
+    }
+  `}</style>
+</header>
 
       {/* 🎥 ACTIVE RFP REELS */}
       <section className="section" aria-labelledby="reels">
