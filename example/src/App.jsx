@@ -129,7 +129,9 @@ function App() {
               rel="noopener noreferrer"
               className="video-preview"
             >
-              <img src={v.thumb} alt={v.title} className="video-thumb" />
+              <div className="video-wrapper">
+                <img src={v.thumb} alt={v.title} className="video-thumb" />
+              </div>
               <div className="video-overlay">
                 <span className="video-title">{v.title}</span>
                 <span className="watch-btn">▶ Watch on TikTok</span>
@@ -207,6 +209,7 @@ function App() {
           font-family: 'Inter', sans-serif;
           padding: 1.5rem;
         }
+
         @keyframes gradientShift {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
@@ -219,12 +222,13 @@ function App() {
           justify-content: space-between;
           align-items: center;
           flex-wrap: wrap;
-          background: rgba(0,0,0,0.4);
+          background: rgba(0, 0, 0, 0.4);
           border-radius: 1rem;
           padding: 1.5rem;
           backdrop-filter: blur(10px);
           margin-bottom: 2rem;
         }
+
         .header-left {
           display: flex;
           align-items: center;
@@ -232,10 +236,12 @@ function App() {
           flex: 1 1 100%;
           flex-wrap: wrap;
         }
+
         .header-text {
           flex: 1;
           min-width: 250px;
         }
+
         .avatar {
           width: 80px;
           height: 80px;
@@ -243,17 +249,20 @@ function App() {
           border: 3px solid #fff;
           flex-shrink: 0;
         }
+
         .brand {
           font-size: clamp(1.8rem, 5vw, 2.6rem);
           font-weight: 800;
           margin: 0.3rem 0;
           word-break: break-word;
         }
+
         .tagline {
           font-size: clamp(0.95rem, 3vw, 1.2rem);
           opacity: 0.9;
           line-height: 1.6;
         }
+
         .chat-btn {
           background: linear-gradient(90deg, #ff6b6b, #9b5de5);
           color: #fff;
@@ -263,15 +272,80 @@ function App() {
           text-decoration: none;
           transition: all 0.3s ease;
           display: inline-block;
-          box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
           text-align: center;
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
         }
+
         .chat-btn:hover {
           transform: scale(1.05);
           box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
         }
 
-        /* Mobile Fixes */
+        /* 🎥 Responsive TikTok Section */
+        .video-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .video-preview {
+          position: relative;
+          border-radius: 1rem;
+          overflow: hidden;
+          transition: transform 0.3s ease;
+        }
+
+        .video-wrapper {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 9 / 16;
+        }
+
+        .video-thumb {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .video-overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 1rem;
+          background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+        }
+
+        .video-title {
+          font-weight: 700;
+          font-size: 1rem;
+        }
+
+        .watch-btn {
+          display: inline-block;
+          background: linear-gradient(90deg, #e50914, #9b5de5);
+          padding: 0.4rem 1rem;
+          border-radius: 25px;
+          font-size: 0.9rem;
+          margin-top: 0.4rem;
+        }
+
+        .video-preview:hover {
+          transform: scale(1.03);
+        }
+
+        .more-link {
+          display: block;
+          text-align: center;
+          margin-top: 1.5rem;
+          font-weight: 700;
+          background: linear-gradient(90deg, #e50914, #9b5de5, #00b4d8);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        /* Responsive Header Fixes */
         @media (max-width: 768px) {
           .header {
             flex-direction: column;
@@ -292,10 +366,18 @@ function App() {
             max-width: 320px;
           }
         }
+
         @media (max-width: 480px) {
-          .avatar { width: 65px; height: 65px; }
-          .brand { font-size: 1.8rem; }
-          .tagline { font-size: 0.95rem; }
+          .avatar {
+            width: 65px;
+            height: 65px;
+          }
+          .brand {
+            font-size: 1.8rem;
+          }
+          .tagline {
+            font-size: 0.95rem;
+          }
         }
       `}</style>
     </div>
