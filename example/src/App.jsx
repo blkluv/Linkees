@@ -33,35 +33,29 @@ const cardItems = [
   {
     title: "🤔 How RFP.AUCTION Works",
     subtitle: "1️⃣ Pitch ▶ 2️⃣ Win ▶ 3️⃣ Deliver",
-    category: "how-it-works",
     image: "https://i.imgur.com/usyzFi1.png",
   },
   {
     title: "🎦 Short RFP Reels (60 SECS)",
     subtitle:
       "Brands submit challenges as 60-second reels that are simple to understand.",
-    category: "how-it-works",
     image: "https://i.imgur.com/JOBqLYx.png",
   },
   {
     title: "🗣️ Short RFP Responses (60 SECS)",
-    subtitle:
-      "Creators pitch solutions using branded UGC RFP mics.",
-    category: "how-it-works",
+    subtitle: "Creators pitch solutions using branded UGC RFP mics.",
     image: "https://i.imgur.com/t4KQBSk.png",
   },
   {
     title: "🏆 Winner Announced",
     subtitle:
       "90% data-driven UGC analytics + 10% creative impact = modern RFP scoring.",
-    category: "how-it-works",
     image: "https://i.imgur.com/juu9uzG.png",
   },
   {
     title: "📈 Social Milestones",
     subtitle:
       "LUMEE BOOTH tracks RFP winners & KPIs in AR-verified dashboards.",
-    category: "how-it-works",
     image: "https://i.imgur.com/hbQCLHt.png",
   },
 ];
@@ -104,7 +98,7 @@ function App() {
       <header className="header">
         <div className="header-left">
           <img src={avatar} alt="RFP.AUCTION" className="avatar" />
-          <div>
+          <div className="header-text">
             <h1 className="brand">RFP.AUCTION</h1>
             <p className="tagline">
               ⚡ We reduced the 90-day RFP cycle to 1 day with 1-minute social
@@ -203,116 +197,107 @@ function App() {
       </footer>
 
       {/* STYLES */}
-    <style jsx>{`
-  .netflix-container {
-    background: linear-gradient(135deg, #e50914, #9b5de5, #00b4d8);
-    background-size: 200% 200%;
-    animation: gradientShift 10s ease infinite;
-    min-height: 100vh;
-    color: #fff;
-    font-family: 'Inter', sans-serif;
-    padding: 1.5rem;
-  }
-  @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+      <style jsx>{`
+        .netflix-container {
+          background: linear-gradient(135deg, #e50914, #9b5de5, #00b4d8);
+          background-size: 200% 200%;
+          animation: gradientShift 10s ease infinite;
+          min-height: 100vh;
+          color: #fff;
+          font-family: 'Inter', sans-serif;
+          padding: 1.5rem;
+        }
+        @keyframes gradientShift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
 
-  /* HEADER */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    backdrop-filter: blur(10px);
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    flex: 1 1 100%;
-    flex-wrap: wrap;
-  }
-  .avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-  }
-  .brand {
-    font-size: clamp(1.8rem, 5vw, 2.6rem);
-    font-weight: 800;
-    margin: 0.5rem 0;
-  }
-  .tagline {
-    font-size: clamp(1rem, 3.6vw, 1.2rem);
-    opacity: 0.9;
-    line-height: 1.5;
-    max-width: 90%;
-  }
-  .chat-btn {
-    background: linear-gradient(90deg, #ff6b6b, #9b5de5);
-    color: #fff;
-    padding: 0.9rem 1.5rem;
-    border-radius: 40px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-  }
-  .chat-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-  }
+        /* HEADER */
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          background: rgba(0,0,0,0.4);
+          border-radius: 1rem;
+          padding: 1.5rem;
+          backdrop-filter: blur(10px);
+          margin-bottom: 2rem;
+        }
+        .header-left {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          flex: 1 1 100%;
+          flex-wrap: wrap;
+        }
+        .header-text {
+          flex: 1;
+          min-width: 250px;
+        }
+        .avatar {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          border: 3px solid #fff;
+          flex-shrink: 0;
+        }
+        .brand {
+          font-size: clamp(1.8rem, 5vw, 2.6rem);
+          font-weight: 800;
+          margin: 0.3rem 0;
+          word-break: break-word;
+        }
+        .tagline {
+          font-size: clamp(0.95rem, 3vw, 1.2rem);
+          opacity: 0.9;
+          line-height: 1.6;
+        }
+        .chat-btn {
+          background: linear-gradient(90deg, #ff6b6b, #9b5de5);
+          color: #fff;
+          padding: 0.9rem 1.5rem;
+          border-radius: 40px;
+          font-weight: 700;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          display: inline-block;
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+          text-align: center;
+        }
+        .chat-btn:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
 
-  /* --- Responsive Fixes --- */
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      text-align: center;
-      padding: 1.5rem 1rem;
-    }
-    .header-left {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .brand {
-      font-size: 2rem;
-    }
-    .tagline {
-      font-size: 1rem;
-      max-width: 95%;
-    }
-    .chat-btn {
-      margin-top: 1rem;
-      width: 100%;
-      max-width: 320px;
-    }
-  }
-
-  /* Small mobile tweaks */
-  @media (max-width: 480px) {
-    .avatar {
-      width: 65px;
-      height: 65px;
-    }
-    .brand {
-      font-size: 1.6rem;
-    }
-    .chat-btn {
-      font-size: 0.95rem;
-      padding: 0.85rem 1.2rem;
-    }
-  }
-`}</style>
+        /* Mobile Fixes */
+        @media (max-width: 768px) {
+          .header {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.2rem;
+          }
+          .header-left {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+          .header-text {
+            max-width: 95%;
+          }
+          .chat-btn {
+            width: 100%;
+            max-width: 320px;
+          }
+        }
+        @media (max-width: 480px) {
+          .avatar { width: 65px; height: 65px; }
+          .brand { font-size: 1.8rem; }
+          .tagline { font-size: 0.95rem; }
+        }
+      `}</style>
     </div>
   );
 }
