@@ -114,22 +114,22 @@ function App() {
       <section className="section">
         <h2 className="section-title">🎥 Active RFP Reels</h2>
         <div className="video-grid">
-          {[
-            "https://www.tiktok.com/embed/v2/7421234567890123456",
-            "https://www.tiktok.com/embed/v2/7422234567890123456",
-            "https://www.tiktok.com/embed/v2/7423234567890123456",
-            "https://www.tiktok.com/embed/v2/7424234567890123456",
-            "https://www.tiktok.com/embed/v2/7425234567890123456"
-          ].map((src, i) => (
-            <div key={i} className="video-card">
-              <iframe
-                src={src}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          ))}
+{[
+  "https://www.tiktok.com/embed/v2/7421234567890123456",
+  "https://www.tiktok.com/embed/v2/7422234567890123456",
+  "https://www.tiktok.com/embed/v2/7423234567890123456",
+  "https://www.tiktok.com/embed/v2/7424234567890123456",
+  "https://www.tiktok.com/embed/v2/7425234567890123456"
+].map((src, i) => (
+  <div key={i} className="video-card">
+    <iframe
+      src={src}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+))}
         </div>
         <a
           href="https://tiktok.com/@RFPTOK"
