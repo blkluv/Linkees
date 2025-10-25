@@ -1,16 +1,19 @@
 import React from "react";
 
 /**
- * Mobile-optimized, Netflix-style landing
- * - Uses Imgur thumbnail variants (…l.jpg/png) + srcSet/sizes
- * - Strict max-width:100% images, aspect-ratio wrappers
- * - No horizontal overflow on iOS Safari
+ * RFP.AUCTION — Apple Vision–style UX (mobile-first)
+ * - Pastel red→purple→blue gradient, soft glass, large tap targets
+ * - Header wraps perfectly; button spans width on mobile
+ * - Reels: 9:16 thumbnails, horizontal snap carousel on mobile, grid on desktop
+ * - How It Works: info only (no outbound links)
+ * - Rapid Services: Stripe links
+ * - Imgur thumbnails (…l) + srcSet/sizes, strict overflow guards
+ * - Respects prefers-reduced-motion
  */
 
 const avatar = "https://i.imgur.com/sg3RinS.jpeg";
 
-// NOTE: use Imgur's 'l' thumbnail suffix for mobile (large thumbnail, ~640px wide).
-// Example: https://i.imgur.com/tn5rCdw.jpeg  -> https://i.imgur.com/tn5rCdwl.jpeg
+/** Imgur mobile thumbnails (…l) with full fallback */
 const tiktokVideos = [
   {
     id: "7427399000000000000",
@@ -42,177 +45,178 @@ const tiktokVideos = [
   },
 ];
 
-// Card art: also switch to 'l' thumbnails; fall back to original if missing.
-const cardItems = [
+const howItems = [
   {
     title: "🤔 How RFP.AUCTION Works",
     subtitle: "1️⃣ Pitch ▶ 2️⃣ Win ▶ 3️⃣ Deliver",
-    imageSmall: "https://i.imgur.com/usyzFi1l.png",
-    imageFull:  "https://i.imgur.com/usyzFi1.png",
+    small: "https://i.imgur.com/usyzFi1l.png",
+    full:  "https://i.imgur.com/usyzFi1.png",
   },
   {
     title: "🎦 Short RFP Reels (60 SECS)",
-    subtitle: "Brands submit challenges as 60-second reels that are simple to understand.",
-    imageSmall: "https://i.imgur.com/JOBqLYxl.png",
-    imageFull:  "https://i.imgur.com/JOBqLYx.png",
+    subtitle: "Brands submit challenges as simple 60-second reels.",
+    small: "https://i.imgur.com/JOBqLYxl.png",
+    full:  "https://i.imgur.com/JOBqLYx.png",
   },
   {
     title: "🗣️ Short RFP Responses (60 SECS)",
     subtitle: "Creators pitch solutions using branded UGC RFP mics.",
-    imageSmall: "https://i.imgur.com/t4KQBSkl.png",
-    imageFull:  "https://i.imgur.com/t4KQBSk.png",
+    small: "https://i.imgur.com/t4KQBSkl.png",
+    full:  "https://i.imgur.com/t4KQBSk.png",
   },
   {
     title: "🏆 Winner Announced",
-    subtitle: "90% data-driven UGC analytics + 10% creative impact = modern RFP scoring.",
-    imageSmall: "https://i.imgur.com/juu9uzGl.png",
-    imageFull:  "https://i.imgur.com/juu9uzG.png",
+    subtitle: "90% analytics + 10% creative impact = modern scoring.",
+    small: "https://i.imgur.com/juu9uzGl.png",
+    full:  "https://i.imgur.com/juu9uzG.png",
   },
   {
     title: "📈 Social Milestones",
-    subtitle: "LUMEE BOOTH tracks RFP winners & KPIs in AR-verified dashboards.",
-    imageSmall: "https://i.imgur.com/hbQCLHtl.png",
-    imageFull:  "https://i.imgur.com/hbQCLHt.png",
+    subtitle: "LUMEE BOOTH tracks winners & KPIs with AR verification.",
+    small: "https://i.imgur.com/hbQCLHtl.png",
+    full:  "https://i.imgur.com/hbQCLHt.png",
   },
 ];
 
 const rapidServices = [
   {
     title: "🎥 RFP Challenge",
-    subtitle: "🎥 Turn your long RFP into a social video challenge in one day. 💰 $7,500",
+    subtitle: "Turn a long RFP into a social video challenge in 1 day. 💰 $7,500",
     link: "https://buy.stripe.com/aFafZh8OR8GW0Gj36V5wI16",
-    imageSmall: "https://i.imgur.com/R7C5ozcl.png",
-    imageFull:  "https://i.imgur.com/R7C5ozc.png",
+    small: "https://i.imgur.com/R7C5ozcl.png",
+    full:  "https://i.imgur.com/R7C5ozc.png",
   },
   {
     title: "⚡ Rapid RFP Response",
-    subtitle: "⚡ Receive a Pitch.com expert response in 1 business day. 💰 $3,500",
+    subtitle: "Receive a Pitch.com expert response in 1 business day. 💰 $3,500",
     link: "https://buy.stripe.com/8x24gz4yBcXc4Wz5f35wI13",
-    imageSmall: "https://i.imgur.com/O5DJhbXl.png",
-    imageFull:  "https://i.imgur.com/O5DJhbX.png",
+    small: "https://i.imgur.com/O5DJhbXl.png",
+    full:  "https://i.imgur.com/O5DJhbX.png",
   },
   {
     title: "🎙️ TikTok RFP UGC Mic",
-    subtitle: "Order a branded TikTok RFP UGC mic for 60-sec replies. 💰 $1,500",
+    subtitle: "Order a branded UGC mic for 60-sec replies. 💰 $1,500",
     link: "https://buy.stripe.com/4gMbJ1c136yOgFh6j75wI17",
-    imageSmall: "https://i.imgur.com/xy0fn9zl.png",
-    imageFull:  "https://i.imgur.com/xy0fn9z.png",
+    small: "https://i.imgur.com/xy0fn9zl.png",
+    full:  "https://i.imgur.com/xy0fn9z.png",
   },
   {
     title: "🧙🏽‍♂️ RFP Expert Consultation",
     subtitle: "Book a 60-min call with a RFP.AUCTION wizard. 💰 $1,200",
     link: "https://buy.stripe.com/aFa9AT4yB3mCcp1fTH5wI14",
-    imageSmall: "https://i.imgur.com/CcZQ7v4l.png",
-    imageFull:  "https://i.imgur.com/CcZQ7v4.png",
+    small: "https://i.imgur.com/CcZQ7v4l.png",
+    full:  "https://i.imgur.com/CcZQ7v4.png",
   },
 ];
 
 function App() {
   return (
-    <div className="netflix-container">
+    <div className="page">
       {/* HEADER */}
-      <header className="header">
-        <div className="header-left">
-          <img src={avatar} alt="RFP.AUCTION" className="avatar" loading="lazy" decoding="async" />
-          <div className="header-text">
+      <header className="hero" role="banner">
+        <div className="hero-left">
+          <img src={avatar} alt="RFP.AUCTION logo" className="avatar" loading="lazy" decoding="async" />
+          <div className="copy">
             <h1 className="brand">RFP.AUCTION</h1>
             <p className="tagline">
-              ⚡ We reduced the 90-day RFP cycle to 1 day with 1-minute social
-              video challenges and analytics-scored responses. Verified on-chain
-              for accountability. ▶ Pitch ▶ Win ▶ Deliver 🏆
+              ⚡ We reduced the 90-day RFP cycle to 1 day with 1-minute social video challenges and
+              analytics-scored responses. Verified on-chain for accountability. ▶ Pitch ▶ Win ▶ Deliver 🏆
             </p>
           </div>
         </div>
+
         <a
           href="https://t.me/hahznft"
           target="_blank"
           rel="noopener noreferrer"
-          className="chat-btn"
+          className="cta"
+          aria-label="Chat with Wizard of Hahz on Telegram"
         >
           💬 Chat with Wizard of Hahz
         </a>
       </header>
 
       {/* 🎥 ACTIVE RFP REELS */}
-      <section className="section">
-        <h2 className="section-title">🎥 Active RFP Reels</h2>
-        <div className="video-grid">
+      <section className="section" aria-labelledby="reels">
+        <h2 id="reels" className="title">🎥 Active RFP Reels</h2>
+
+        {/* Mobile: horizontal snap carousel; Desktop: grid */}
+        <div className="reels">
           {tiktokVideos.map((v) => (
-            <a key={v.id} href={v.link} target="_blank" rel="noopener noreferrer" className="video-preview">
-              {/* 9:16 wrapper keeps thumbs perfectly inside on mobile */}
-              <div className="video-wrapper">
+            <a key={v.id} href={v.link} target="_blank" rel="noopener noreferrer" className="reel" aria-label={`${v.title} — watch on TikTok`}>
+              <div className="reel-media">
                 <img
                   src={v.thumb}
                   srcSet={`${v.thumb} 640w, ${v.full} 1200w`}
-                  sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  sizes="(max-width: 600px) 80vw, (max-width: 1024px) 33vw, 320px"
                   alt={v.title}
-                  className="video-thumb"
+                  className="reel-img"
                   loading="lazy"
                   decoding="async"
                   onError={(e) => { e.currentTarget.src = v.full; }}
                 />
               </div>
-              <div className="video-overlay">
-                <span className="video-title">{v.title}</span>
-                <span className="watch-btn">▶ Watch on TikTok</span>
+              <div className="reel-overlay">
+                <span className="reel-title">{v.title}</span>
+                <span className="reel-btn">▶ Watch on TikTok</span>
               </div>
             </a>
           ))}
         </div>
-        <a href="https://tiktok.com/@RFPTOK" target="_blank" rel="noopener noreferrer" className="more-link">
+
+        <a href="https://tiktok.com/@RFPTOK" target="_blank" rel="noopener noreferrer" className="more">
           ▶ See More Active RFPs
         </a>
       </section>
 
-      {/* HOW IT WORKS (informational only) */}
-      <section className="section">
-        <h2 className="section-title">🤔 How It Works</h2>
-        <div className="cards">
-          {cardItems.map((item, i) => (
-            <div key={i} className="card">
-              {/* 16:9 safe wrapper to prevent overflow */}
+      {/* 🤔 HOW IT WORKS (no links) */}
+      <section className="section" aria-labelledby="how">
+        <h2 id="how" className="title">🤔 How It Works</h2>
+        <div className="grid">
+          {howItems.map((item, i) => (
+            <article key={i} className="card" role="article">
               <div className="ratio-16x9">
                 <img
-                  src={item.imageSmall}
-                  srcSet={`${item.imageSmall} 640w, ${item.imageFull} 1200w`}
-                  sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  src={item.small}
+                  srcSet={`${item.small} 640w, ${item.full} 1200w`}
+                  sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 380px"
                   alt={item.title}
                   className="card-img"
                   loading="lazy"
                   decoding="async"
-                  onError={(e) => { e.currentTarget.src = item.imageFull; }}
+                  onError={(e) => { e.currentTarget.src = item.full; }}
                 />
               </div>
               <div className="card-body">
                 <h3 className="card-title">{item.title}</h3>
-                <p className="card-subtitle">{item.subtitle}</p>
+                <p className="card-sub">{item.subtitle}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
 
-      {/* RAPID SERVICES */}
-      <section className="section">
-        <h2 className="section-title">⚡ Rapid Services</h2>
-        <div className="cards">
+      {/* ⚡ RAPID SERVICES */}
+      <section className="section" aria-labelledby="services">
+        <h2 id="services" className="title">⚡ Rapid Services</h2>
+        <div className="grid">
           {rapidServices.map((item, i) => (
-            <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="card link-card">
+            <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="card link" aria-label={`${item.title} — open product`}>
               <div className="ratio-16x9">
                 <img
-                  src={item.imageSmall}
-                  srcSet={`${item.imageSmall} 640w, ${item.imageFull} 1200w`}
-                  sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  src={item.small}
+                  srcSet={`${item.small} 640w, ${item.full} 1200w`}
+                  sizes="(max-width: 600px) 90vw, (max-width: 1024px) 45vw, 380px"
                   alt={item.title}
                   className="card-img"
                   loading="lazy"
                   decoding="async"
-                  onError={(e) => { e.currentTarget.src = item.imageFull; }}
+                  onError={(e) => { e.currentTarget.src = item.full; }}
                 />
               </div>
               <div className="card-body">
                 <h3 className="card-title">{item.title}</h3>
-                <p className="card-subtitle">{item.subtitle}</p>
+                <p className="card-sub">{item.subtitle}</p>
               </div>
             </a>
           ))}
@@ -220,131 +224,229 @@ function App() {
       </section>
 
       {/* FOOTER */}
-      <footer className="footer">
-        <div className="footer-links">
-          <a href="https://www.tiktok.com/@rfptok" target="_blank">🎵 TikTok</a>
-          <a href="https://www.linkedin.com/groups/13062182" target="_blank">💼 LinkedIn</a>
-          <a href="https://app.lumeebooth.com" target="_blank">📸 LUMEE BOOTH</a>
-          <a href="https://t.me/hahznft" target="_blank">🧙🏽‍♂️ Telegram</a>
-        </div>
-        <p className="footer-copy">© 2025 RFP.AUCTION · All Rights Reserved</p>
+      <footer className="footer" role="contentinfo">
+        <nav className="links" aria-label="Social links">
+          <a href="https://www.tiktok.com/@rfptok" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+          <a href="https://www.linkedin.com/groups/13062182" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+          <a href="https://app.lumeebooth.com" target="_blank" rel="noopener noreferrer">📸 LUMEE BOOTH</a>
+          <a href="https://t.me/hahznft" target="_blank" rel="noopener noreferrer">🧙🏽‍♂️ Telegram</a>
+        </nav>
+        <p className="copy">© 2025 RFP.AUCTION · All Rights Reserved</p>
       </footer>
 
       {/* STYLES */}
       <style jsx>{`
-        /* Global guards so nothing overflows on iOS Safari */
-        :global(html), :global(body) { overflow-x: hidden; }
+        /* ---------- Design Tokens (Apple Vision–style pastel) ---------- */
+        :root {
+          --bg-grad: linear-gradient(160deg, #f05a7e 0%, #b07cf6 55%, #77d0f5 100%);
+          --glass: rgba(255,255,255,0.22);
+          --glass-deep: rgba(0,0,0,0.08);
+          --text-strong: rgba(255,255,255,0.98);
+          --text-soft: rgba(255,255,255,0.86);
+          --shadow-1: 0 8px 30px rgba(0,0,0,0.18);
+          --shadow-2: 0 12px 50px rgba(0,0,0,0.24);
+          --ring: rgba(255,255,255,0.6);
+        }
+
+        /* Global guards */
+        :global(html), :global(body) { overflow-x: hidden; background: #000; }
         :global(*) { box-sizing: border-box; }
         :global(img) { max-width: 100%; height: auto; display: block; }
 
-        .netflix-container {
-          background: linear-gradient(135deg, #e50914, #9b5de5, #00b4d8);
-          background-size: 200% 200%;
-          animation: gradientShift 10s ease infinite;
+        .page {
           min-height: 100vh;
-          color: #fff;
-          font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial;
-          padding: 1.25rem;
+          color: var(--text-strong);
+          font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, Segoe UI, Roboto, Arial;
+          padding: calc(16px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-left)) calc(24px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-right));
+          background: var(--bg-grad);
+          background-size: 180% 180%;
+          animation: bgShift 14s ease-in-out infinite;
         }
-        @keyframes gradientShift {
+        @media (prefers-reduced-motion: reduce) {
+          .page { animation: none; }
+        }
+        @keyframes bgShift {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
         }
 
-        /* HEADER */
-        .header {
+        /* ---------- HERO ---------- */
+        .hero {
           display: flex;
+          align-items: center;
           justify-content: space-between;
-          align-items: center;
+          gap: 16px;
           flex-wrap: wrap;
-          background: rgba(0,0,0,0.4);
-          border-radius: 1rem;
-          padding: 1.25rem;
-          backdrop-filter: blur(10px);
-          margin-bottom: 2rem;
+          background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
+          border: 1px solid rgba(255,255,255,0.35);
+          border-radius: 24px;
+          padding: 18px 16px;
+          box-shadow: var(--shadow-1);
+          backdrop-filter: saturate(180%) blur(18px);
+          -webkit-backdrop-filter: saturate(180%) blur(18px);
+          margin-bottom: 20px;
         }
-        .header-left {
+        .hero-left {
           display: flex;
           align-items: center;
-          gap: 1rem;
-          flex: 1 1 100%;
+          gap: 12px;
+          flex: 1 1 560px;
+          min-width: 260px;
           flex-wrap: wrap;
         }
-        .header-text { flex: 1; min-width: 240px; }
         .avatar {
-          width: 74px; height: 74px; border-radius: 50%; border: 3px solid #fff; flex-shrink: 0;
+          width: 66px;
+          height: 66px;
+          border-radius: 50%;
+          border: 3px solid white;
+          box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+          flex-shrink: 0;
         }
-        .brand { font-size: clamp(1.8rem, 6vw, 2.6rem); font-weight: 800; margin: .25rem 0; word-break: break-word; }
-        .tagline { font-size: clamp(.95rem, 3.6vw, 1.15rem); opacity: .95; line-height: 1.6; }
-        .chat-btn {
-          background: linear-gradient(90deg, #ff6b6b, #9b5de5);
-          color: #fff; padding: .9rem 1.5rem; border-radius: 999px; font-weight: 800;
-          text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; text-align: center;
-          box-shadow: 0 6px 18px rgba(0,0,0,.25);
+        .copy { flex: 1; min-width: 220px; }
+        .brand {
+          margin: 2px 0 6px;
+          font-weight: 800;
+          letter-spacing: .2px;
+          line-height: 1.12;
+          font-size: clamp(24px, 7vw, 36px);
+          text-shadow: 0 2px 14px rgba(0,0,0,0.25);
         }
-        .chat-btn:hover { transform: translateY(-1px); }
+        .tagline {
+          color: var(--text-soft);
+          font-size: clamp(14px, 3.8vw, 17px);
+          line-height: 1.6;
+          max-width: 780px;
+        }
+        .cta {
+          appearance: none;
+          border: 0;
+          text-decoration: none;
+          color: #fff;
+          font-weight: 800;
+          padding: 14px 18px;
+          border-radius: 999px;
+          background: linear-gradient(90deg, #ff93a8, #c29bff, #8de3ff);
+          box-shadow: 0 10px 28px rgba(0,0,0,0.22), inset 0 0 0 1px var(--ring);
+          transition: transform .2s ease, box-shadow .2s ease, background-position .3s ease;
+          background-size: 160% 100%;
+          text-align: center;
+        }
+        .cta:hover { transform: translateY(-1px); background-position: right center; box-shadow: var(--shadow-2); }
+        .cta:active { transform: translateY(0); }
 
-        /* Sections */
-        .section { margin: 2rem 0; }
-        .section-title {
-          font-size: clamp(1.4rem, 5.2vw, 2rem);
-          font-weight: 800; margin-bottom: 1rem; border-left: 6px solid #fff; padding-left: .9rem;
-        }
-
-        /* Reels (9:16) */
-        .video-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-          gap: 1rem;
-        }
-        .video-preview { position: relative; border-radius: 1rem; overflow: hidden; background: rgba(255,255,255,.08); }
-        .video-wrapper { position: relative; width: 100%; aspect-ratio: 9 / 16; }
-        .video-thumb {
-          position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
-        }
-        .video-overlay {
-          position: absolute; inset: auto 0 0 0; padding: .9rem;
-          background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.85) 100%);
-        }
-        .video-title { font-weight: 700; font-size: clamp(.95rem, 3vw, 1.05rem); text-shadow: 0 2px 6px rgba(0,0,0,.6); }
-        .watch-btn {
-          margin-top: .45rem; display: inline-block; padding: .45rem .9rem; border-radius: 999px;
-          font-weight: 800; font-size: .9rem; background: linear-gradient(90deg, #e50914, #9b5de5, #00b4d8);
-        }
-        .more-link {
-          display: block; text-align: center; margin-top: 1.2rem; font-weight: 800;
-          background: linear-gradient(90deg, #e50914, #9b5de5, #00b4d8);
-          -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-
-        /* Cards (16:9) */
-        .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
-        .card { background: rgba(255,255,255,.08); border-radius: 1rem; overflow: hidden; border: 1px solid rgba(255,255,255,.12); }
-        .ratio-16x9 { position: relative; width: 100%; aspect-ratio: 16 / 9; }
-        .card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: rgba(0,0,0,.15); }
-        .card-body { padding: 1rem; }
-        .card-title { margin: 0 0 .35rem; font-size: 1.08rem; font-weight: 800; }
-        .card-subtitle { margin: 0; opacity: .88; font-size: .98rem; line-height: 1.45; }
-        .link-card { color: inherit; text-decoration: none; }
-
-        /* Footer */
-        .footer { margin-top: 2.25rem; padding: 1.25rem; text-align: center; background: rgba(0,0,0,.35); border-radius: 1rem; backdrop-filter: blur(8px); }
-        .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem 1.25rem; margin-bottom: .6rem; }
-        .footer-links a { color: #fff; text-decoration: none; font-weight: 700; }
-        .footer-links a:hover { text-decoration: underline; }
-        .footer-copy { font-size: .92rem; opacity: .85; }
-
-        /* Mobile stacking */
         @media (max-width: 768px) {
-          .header { flex-direction: column; align-items: center; text-align: center; gap: 1.1rem; }
-          .header-left { flex-direction: column; align-items: center; text-align: center; }
-          .header-text { max-width: 96%; }
-          .chat-btn { width: 100%; max-width: 320px; }
+          .hero { flex-direction: column; align-items: center; text-align: center; }
+          .hero-left { justify-content: center; }
+          .cta { width: 100%; max-width: 360px; }
         }
-        @media (max-width: 480px) {
-          .avatar { width: 64px; height: 64px; }
+        @media (max-width: 420px) {
+          .avatar { width: 58px; height: 58px; }
         }
+
+        /* ---------- SECTIONS ---------- */
+        .section { margin: 22px 0; }
+        .title {
+          font-size: clamp(18px, 5.6vw, 24px);
+          font-weight: 800;
+          margin: 0 0 12px;
+          padding-left: 10px;
+          border-left: 6px solid rgba(255,255,255,0.9);
+          text-shadow: 0 1px 10px rgba(0,0,0,0.2);
+        }
+
+        /* ---------- REELS: mobile carousel + desktop grid ---------- */
+        .reels {
+          display: grid;
+          grid-auto-flow: column;
+          grid-auto-columns: 80%;
+          gap: 12px;
+          overflow-x: auto;
+          padding: 2px 2px 10px;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+        }
+        .reels::-webkit-scrollbar { display: none; }
+
+        .reel {
+          position: relative;
+          display: block;
+          border-radius: 18px;
+          overflow: hidden;
+          scroll-snap-align: start;
+          background: var(--glass-deep);
+          border: 1px solid rgba(255,255,255,0.28);
+          box-shadow: var(--shadow-1);
+        }
+        .reel-media { position: relative; width: 100%; aspect-ratio: 9 / 16; }
+        .reel-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .reel-overlay {
+          position: absolute; inset: auto 0 0 0; padding: 12px;
+          background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.85) 100%);
+          color: #fff;
+        }
+        .reel-title { font-weight: 700; font-size: clamp(14px, 3.8vw, 16px); text-shadow: 0 2px 6px rgba(0,0,0,.6); }
+        .reel-btn {
+          margin-top: 6px; display: inline-block; padding: 8px 12px; border-radius: 999px;
+          font-weight: 800; font-size: 13px;
+          background: linear-gradient(90deg, #ff93a8, #c29bff, #8de3ff);
+        }
+
+        /* Desktop grid for reels */
+        @media (min-width: 1024px) {
+          .reels { display: grid; grid-auto-flow: unset; grid-auto-columns: unset; grid-template-columns: repeat(4, 1fr); overflow: visible; }
+          .reel { scroll-snap-align: unset; }
+        }
+
+        .more {
+          display: block;
+          text-align: center;
+          margin-top: 14px;
+          font-weight: 800;
+          background: linear-gradient(90deg, #ffd2db, #e5d3ff, #c9f1ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        /* ---------- GRID CARDS ---------- */
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+          gap: 12px;
+        }
+        .card {
+          background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
+          border: 1px solid rgba(255,255,255,0.35);
+          border-radius: 18px;
+          overflow: hidden;
+          box-shadow: var(--shadow-1);
+          color: var(--text-strong);
+        }
+        .link { color: inherit; text-decoration: none; }
+        .ratio-16x9 { position: relative; width: 100%; aspect-ratio: 16 / 9; }
+        .card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: rgba(0,0,0,0.1); }
+        .card-body { padding: 12px 14px 14px; }
+        .card-title { margin: 0 0 6px; font-size: 16px; font-weight: 800; }
+        .card-sub { margin: 0; font-size: 14px; color: var(--text-soft); line-height: 1.45; }
+
+        /* ---------- FOOTER ---------- */
+        .footer {
+          margin-top: 24px;
+          background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
+          border: 1px solid rgba(255,255,255,0.3);
+          border-radius: 18px;
+          padding: 16px;
+          text-align: center;
+          box-shadow: var(--shadow-1);
+          backdrop-filter: blur(10px);
+        }
+        .links {
+          display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 16px; margin-bottom: 8px;
+        }
+        .links a { color: #fff; text-decoration: none; font-weight: 800; }
+        .links a:hover { text-decoration: underline; }
+        .copy { color: var(--text-soft); font-size: 13.5px; }
       `}</style>
     </div>
   );
