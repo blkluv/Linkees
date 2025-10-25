@@ -5,33 +5,27 @@ const avatar = "https://i.imgur.com/sg3RinS.jpeg";
 const tiktokVideos = [
   {
     id: "7427399000000000000",
-    link: "https://www.tiktok.com/@rfptok/video/7427399000000000000",
-    thumb: "https://i.imgur.com/qS7xV8A.png",
-    title: "🎥 City of San José AI Challenge",
+    link: "https://www.tiktok.com/@rfptok/photo/7565124876340694302",
+    thumb: "https://i.imgur.com/tn5rCdw.jpeg",
+    title: "🤖 City of San José AI Challenge",
   },
   {
     id: "7427399111111111111",
-    link: "https://www.tiktok.com/@rfptok/video/7427399111111111111",
-    thumb: "https://i.imgur.com/PPN4HgZ.png",
-    title: "⚡ Rapid RFP Challenge",
+    link: "https://www.tiktok.com/@rfptok/photo/7564936375531769119",
+    thumb: "https://i.imgur.com/zYaZdWd.jpeg",
+    title: "⚡ $20M Oakland",
   },
   {
     id: "7427399222222222222",
-    link: "https://www.tiktok.com/@rfptok/video/7427399222222222222",
-    thumb: "https://i.imgur.com/s2i2NGT.png",
-    title: "🏗️ Infrastructure Innovation Bid",
+    link: "https://www.tiktok.com/@rfptok/video/7519064742170758430",
+    thumb: "https://i.imgur.com/AkDEoSY.jpeg",
+    title: "🏗️ Wyoming Stablecoin RFP",
   },
   {
     id: "7427399333333333333",
-    link: "https://www.tiktok.com/@rfptok/video/7427399333333333333",
-    thumb: "https://i.imgur.com/FHEG8Uv.png",
-    title: "💼 City Tech RFP Showcase",
-  },
-  {
-    id: "7427399444444444444",
-    link: "https://www.tiktok.com/@rfptok/video/7427399444444444444",
-    thumb: "https://i.imgur.com/CEQlmEq.png",
-    title: "🏆 RFP Winner Announced",
+    link: "https://www.tiktok.com/@rfptok/video/7552154021411294494",
+    thumb: "https://i.imgur.com/S8KQgCo.jpeg",
+    title: "💼 NYC Casino RFP",
   },
 ];
 
