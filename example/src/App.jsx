@@ -115,11 +115,11 @@ function App() {
         <h2 className="section-title">🎥 Active RFP Reels</h2>
         <div className="video-grid">
           {[
-            "https://www.tiktok.com/embed/ZP8D192WV",
-            "https://www.tiktok.com/embed/ZP8D1agvq",
-            "https://www.tiktok.com/embed/ZP8D1rMvw",
-            "https://www.tiktok.com/embed/ZP8D15y7V",
-            "https://www.tiktok.com/embed/ZP8D129Ss",
+            "https://www.tiktok.com/embed/v2/7421234567890123456",
+            "https://www.tiktok.com/embed/v2/7422234567890123456",
+            "https://www.tiktok.com/embed/v2/7423234567890123456",
+            "https://www.tiktok.com/embed/v2/7424234567890123456",
+            "https://www.tiktok.com/embed/v2/7425234567890123456"
           ].map((src, i) => (
             <div key={i} className="video-card">
               <iframe
