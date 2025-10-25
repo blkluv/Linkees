@@ -4,14 +4,6 @@ const avatar = "https://i.imgur.com/sg3RinS.jpeg";
 
 const cardItems = [
   {
-    title: "📲 Active RFPs (@RFPTOK)",
-    subtitle: "Watch 1-minute RFP challenges and 1-minute pitch replies 🔥",
-    type: "tiktok",
-    link: "https://www.tiktok.com/@rfptok",
-    category: "active-rfps",
-    image: "https://i.imgur.com/utL4kuW.png",
-  },
-  {
     title: "🤔 How RFP.AUCTION Works",
     subtitle: "1️⃣ Pitch ▶ 2️⃣ Win ▶ 3️⃣ Deliver",
     type: "website",
@@ -20,32 +12,28 @@ const cardItems = [
   },
   {
     title: "🎦 Short RFP Reels (60 SECS)",
-    subtitle:
-      "Brands submit challenges as 60-second reels that are simple to understand.",
+    subtitle: "Brands submit challenges as 60-second reels that are simple to understand.",
     type: "youtube",
     category: "how-it-works",
     image: "https://i.imgur.com/JOBqLYx.png",
   },
   {
     title: "🗣️ Short RFP Responses (60 SECS)",
-    subtitle:
-      "Creators pitch solutions in 60-second responses using branded UGC RFP mics.",
+    subtitle: "Creators pitch solutions using branded UGC RFP mics.",
     type: "youtube",
     category: "how-it-works",
     image: "https://i.imgur.com/t4KQBSk.png",
   },
   {
     title: "🏆 Winner Announced",
-    subtitle:
-      "90% data-driven UGC analytics + 10% creative impact = modern RFP scoring.",
+    subtitle: "90% data-driven UGC analytics + 10% creative impact = modern RFP scoring.",
     type: "tiktok",
     category: "how-it-works",
     image: "https://i.imgur.com/juu9uzG.png",
   },
   {
     title: "📈 Social Milestones",
-    subtitle:
-      "LUMEE BOOTH tracks RFP winners, milestones & KPIs in AR-verified dashboards.",
+    subtitle: "LUMEE BOOTH tracks RFP winners & KPIs in AR-verified dashboards.",
     type: "website",
     category: "how-it-works",
     image: "https://i.imgur.com/hbQCLHt.png",
@@ -61,8 +49,7 @@ const cardItems = [
   },
   {
     title: "⚡ Rapid RFP Response",
-    subtitle:
-      "⚡ Receive a Pitch.com expert response in 1 business day. 💰 $3,500",
+    subtitle: "⚡ Receive a Pitch.com expert response in 1 business day. 💰 $3,500",
     type: "stripe",
     link: "https://buy.stripe.com/8x24gz4yBcXc4Wz5f35wI13",
     category: "rapid-services",
@@ -70,8 +57,7 @@ const cardItems = [
   },
   {
     title: "🎙️ TikTok RFP UGC Mic",
-    subtitle:
-      "Order a branded TikTok RFP UGC mic for 60-sec replies. 💰 $1,500",
+    subtitle: "Order a branded TikTok RFP UGC mic for 60-sec replies. 💰 $1,500",
     type: "stripe",
     link: "https://buy.stripe.com/4gMbJ1c136yOgFh6j75wI17",
     category: "rapid-services",
@@ -79,8 +65,7 @@ const cardItems = [
   },
   {
     title: "🧙🏽‍♂️ RFP Expert Consultation",
-    subtitle:
-      "Book a 60-min call with a RFP.AUCTION wizard to brainstorm your challenge. 💰 $1,200",
+    subtitle: "Book a 60-min call with a RFP.AUCTION wizard. 💰 $1,200",
     type: "stripe",
     link: "https://buy.stripe.com/aFa9AT4yB3mCcp1fTH5wI14",
     category: "rapid-services",
@@ -89,10 +74,6 @@ const cardItems = [
 ];
 
 const categorizedItems = {
-  "active-rfps": {
-    title: "📲 Active RFPs",
-    items: cardItems.filter((i) => i.category === "active-rfps"),
-  },
   "how-it-works": {
     title: "🤔 How It Works",
     items: cardItems.filter((i) => i.category === "how-it-works"),
@@ -113,8 +94,9 @@ function App() {
           <div>
             <h1 className="brand">RFP.AUCTION</h1>
             <p className="tagline">
-              ⚡ We reduced the 90-day RFP cycle to 1 day with 1-minute social video challenges and analytics-scored responses.
-              Verified on-chain for accountability. ▶ Pitch ▶ Win ▶ Deliver 🏆
+              ⚡ We reduced the 90-day RFP cycle to 1 day with 1-minute social
+              video challenges and analytics-scored responses. Verified on-chain
+              for accountability. ▶ Pitch ▶ Win ▶ Deliver 🏆
             </p>
           </div>
         </div>
@@ -128,14 +110,58 @@ function App() {
         </a>
       </header>
 
-      {/* SECTIONS */}
+      {/* 🎥 ACTIVE RFP REELS SECTION */}
+      <section className="section">
+        <h2 className="section-title">🎥 Active RFP Reels</h2>
+        <div className="video-grid">
+          {[
+            "https://www.tiktok.com/embed/ZP8D192WV",
+            "https://www.tiktok.com/embed/ZP8D1agvq",
+            "https://www.tiktok.com/embed/ZP8D1rMvw",
+            "https://www.tiktok.com/embed/ZP8D15y7V",
+            "https://www.tiktok.com/embed/ZP8D129Ss",
+          ].map((src, i) => (
+            <div key={i} className="video-card">
+              <iframe
+                src={src}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ))}
+        </div>
+        <a
+          href="https://tiktok.com/@RFPTOK"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="more-link"
+        >
+          ▶ See More Active RFPs
+        </a>
+      </section>
+
+      {/* OTHER SECTIONS */}
       {Object.entries(categorizedItems).map(([key, cat]) => (
         <section key={key} className="section">
           <h2 className="section-title">{cat.title}</h2>
           <div className="cards">
             {cat.items.map((item, i) => (
               <div key={i} className="card">
-                {item.category === "how-it-works" ? (
+                {item.link ? (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="card-inner"
+                  >
+                    <img src={item.image} alt={item.title} className="card-img" />
+                    <div className="card-body">
+                      <h3>{item.title}</h3>
+                      <p>{item.subtitle}</p>
+                    </div>
+                  </a>
+                ) : (
                   <div className="card-inner">
                     <img src={item.image} alt={item.title} className="card-img" />
                     <div className="card-body">
@@ -143,16 +169,6 @@ function App() {
                       <p>{item.subtitle}</p>
                     </div>
                   </div>
-                ) : (
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    <div className="card-inner">
-                      <img src={item.image} alt={item.title} className="card-img" />
-                      <div className="card-body">
-                        <h3>{item.title}</h3>
-                        <p>{item.subtitle}</p>
-                      </div>
-                    </div>
-                  </a>
                 )}
               </div>
             ))}
@@ -243,6 +259,32 @@ function App() {
           margin-bottom: 1.5rem;
           border-left: 6px solid #fff;
           padding-left: 1rem;
+        }
+        .video-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 2rem;
+        }
+        .video-card iframe {
+          width: 100%;
+          height: 500px;
+          border-radius: 1rem;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .video-card:hover iframe {
+          transform: scale(1.03);
+          box-shadow: 0 0 25px rgba(155,93,229,0.7);
+        }
+        .more-link {
+          display: block;
+          text-align: center;
+          margin-top: 2rem;
+          font-weight: 700;
+          text-decoration: none;
+          background: linear-gradient(90deg, #e50914, #9b5de5, #00b4d8);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
         .cards {
           display: grid;
