@@ -203,189 +203,116 @@ function App() {
       </footer>
 
       {/* STYLES */}
-      <style jsx>{`
-        .netflix-container {
-          background: linear-gradient(135deg, #e50914, #9b5de5, #00b4d8);
-          background-size: 200% 200%;
-          animation: gradientShift 10s ease infinite;
-          min-height: 100vh;
-          color: #fff;
-          font-family: 'Inter', sans-serif;
-          padding: 2rem;
-        }
-        @keyframes gradientShift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-wrap: wrap;
-          background: rgba(0,0,0,0.4);
-          border-radius: 1rem;
-          padding: 2rem;
-          backdrop-filter: blur(10px);
-          margin-bottom: 3rem;
-        }
-        .header-left {
-          display: flex;
-          align-items: center;
-          gap: 1.5rem;
-          max-width: 70%;
-        }
-        .avatar {
-          width: 90px;
-          height: 90px;
-          border-radius: 50%;
-          border: 3px solid #fff;
-        }
-        .brand {
-          font-size: 2.5rem;
-          font-weight: 800;
-          margin: 0;
-        }
-        .tagline {
-          opacity: 0.9;
-          font-size: 1.1rem;
-          line-height: 1.5;
-          margin-top: 0.5rem;
-        }
-        .chat-btn {
-          background: linear-gradient(90deg, #ff6b6b, #9b5de5);
-          color: #fff;
-          padding: 1rem 1.8rem;
-          border-radius: 50px;
-          font-weight: 700;
-          text-decoration: none;
-          transition: all 0.3s ease;
-        }
-        .chat-btn:hover {
-          transform: scale(1.05);
-          box-shadow: 0 0 20px rgba(255,255,255,0.4);
-        }
-        .section {
-          margin-bottom: 4rem;
-        }
-        .section-title {
-          font-size: 2rem;
-          font-weight: 700;
-          margin-bottom: 1.5rem;
-          border-left: 6px solid #fff;
-          padding-left: 1rem;
-        }
-        .video-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-          gap: 2rem;
-        }
-        .video-preview {
-          position: relative;
-          border-radius: 1rem;
-          overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .video-thumb {
-          width: 100%;
-          height: 500px;
-          object-fit: cover;
-          border-radius: 1rem;
-        }
-        .video-overlay {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          padding: 1.5rem;
-          background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          color: #fff;
-        }
-        .watch-btn {
-          background: linear-gradient(90deg, #e50914, #9b5de5, #00b4d8);
-          padding: 0.5rem 1rem;
-          border-radius: 30px;
-          font-weight: 700;
-          margin-top: 0.5rem;
-          width: fit-content;
-        }
-        .video-preview:hover {
-          transform: scale(1.03);
-          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        .more-link {
-          display: block;
-          text-align: center;
-          margin-top: 2rem;
-          font-weight: 700;
-          text-decoration: none;
-          background: linear-gradient(90deg, #e50914, #9b5de5, #00b4d8);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-        .cards {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-          gap: 2rem;
-        }
-        .card {
-          background: rgba(255,255,255,0.1);
-          border-radius: 1rem;
-          overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        .card-img {
-          width: 100%;
-          height: 180px;
-          object-fit: contain;
-          background: rgba(0,0,0,0.2);
-        }
-        .card-body {
-          padding: 1.5rem;
-        }
-        .card-body h3 {
-          margin: 0 0 0.5rem 0;
-          font-size: 1.3rem;
-        }
-        .card-body p {
-          opacity: 0.85;
-          font-size: 1rem;
-        }
-        .footer {
-          margin-top: 4rem;
-          padding: 2rem;
-          text-align: center;
-          background: rgba(0,0,0,0.4);
-          border-radius: 1rem;
-          backdrop-filter: blur(8px);
-        }
-        .footer-links {
-          display: flex;
-          justify-content: center;
-          gap: 2rem;
-          flex-wrap: wrap;
-          margin-bottom: 1rem;
-        }
-        .footer-links a {
-          color: #fff;
-          text-decoration: none;
-          font-weight: 600;
-        }
-        .footer-links a:hover {
-          text-decoration: underline;
-        }
-        .footer-copy {
-          font-size: 0.9rem;
-          opacity: 0.8;
-        }
-      `}</style>
+    <style jsx>{`
+  .netflix-container {
+    background: linear-gradient(135deg, #e50914, #9b5de5, #00b4d8);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    min-height: 100vh;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding: 1.5rem;
+  }
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+  }
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+  .brand {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-weight: 800;
+    margin: 0.5rem 0;
+  }
+  .tagline {
+    font-size: clamp(1rem, 3.6vw, 1.2rem);
+    opacity: 0.9;
+    line-height: 1.5;
+    max-width: 90%;
+  }
+  .chat-btn {
+    background: linear-gradient(90deg, #ff6b6b, #9b5de5);
+    color: #fff;
+    padding: 0.9rem 1.5rem;
+    border-radius: 40px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  }
+  .chat-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+
+  /* --- Responsive Fixes --- */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    .header-left {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .brand {
+      font-size: 2rem;
+    }
+    .tagline {
+      font-size: 1rem;
+      max-width: 95%;
+    }
+    .chat-btn {
+      margin-top: 1rem;
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  /* Small mobile tweaks */
+  @media (max-width: 480px) {
+    .avatar {
+      width: 65px;
+      height: 65px;
+    }
+    .brand {
+      font-size: 1.6rem;
+    }
+    .chat-btn {
+      font-size: 0.95rem;
+      padding: 0.85rem 1.2rem;
+    }
+  }
+`}</style>
     </div>
   );
 }
